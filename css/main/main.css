@@ -13,20 +13,21 @@
 /* 폰트 */
 
 /* 공통 */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
+  color: #000;
 }
-.wrap{
+.wrap {
   position: relative;
   display: block;
 }
-.inner{
+.inner {
   position: relative;
   display: block;
   max-width: 1300px;
