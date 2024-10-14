@@ -1,1 +1,27 @@
 @charset "utf-8";
+.introduction{
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.introduction2{
+  display: block;
+  position: relative;
+  background-color: #FFF9EA;
+}
+.introduction-wrap{
+  display: flex;
+}
+.intro-left{
+  
+}
+.introduction h1{
+  font-size: 40px;
+  font-weight: bold;
+}
+.introduction h3{
+  font-size: 30px;
+}
+.introduction p{
+  font-size: 21px;
+}
