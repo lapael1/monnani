@@ -1,15 +1,16 @@
 @charset "utf-8";
-h1 {
-  font-size: 100px;
-  margin: 0 auto;
-}
 .header {
   width: 100%;
   height: 100px;
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.1);
   z-index: 1;
   backdrop-filter: blur(10px); /* 배경을 흐리게 설정 */
+  transition: background-color 0.5s ease, backdrop-filter 0.5s ease; /* 0.5초 동안 자연스럽게 변환 */
+}
+.header.active{
+  background-color: white;
+  backdrop-filter: none;
 }
 .header .inner {
   width: 100%;
