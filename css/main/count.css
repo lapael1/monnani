@@ -1,1 +1,66 @@
 @charset "utf-8";
+.count .title{
+  margin-top: 100px;
+}
+/* count */
+/* 공통 스타일 */
+.count-wrap {
+  display: flex; /* 플렉스 박스 레이아웃 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: space-between; /* 각 항목 간 공간 확보 */
+  background-color: #F5F5F7;
+  border-radius: 20px;
+  width: 100%;
+  min-height: 308px;
+}
+
+/* count-left 중앙 정렬 */
+.count-left {
+  flex: 1; /* 여유 공간을 차지 */
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+.count-left-ul{
+  line-height: 250%;
+}
+.count-left-ul li:first-child{
+  font-size: 24px;
+}
+.count-left-ul li:last-child{
+  font-size: 40px;
+  font-weight: bold;
+  color: #FF6741;
+}
+
+/* count-middle 세로 구분선 */
+.count-middle {
+  width: 2px; /* 구분선 너비 */
+  height: 80px; /* 구분선 높이 */
+  background-color: #333; /* 구분선 색상 */
+}
+
+/* count-right space-between 효과 */
+.count-right {
+  flex: 1; /* 여유 공간을 차지 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.count-right-ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 5% 3% 5%;
+}
+.count-right-ul li:first-child{
+  font-size: 20px;
+}
+.count-right-ul li:last-child{
+  font-size: 20px;
+  font-weight: bold;
+}
+sup {
+  font-size: smaller; /* 크기를 텍스트보다 작게 설정 */
+  vertical-align: super; /* 위 첨자가 올라가도록 설정 */
+}

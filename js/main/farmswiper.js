@@ -2,7 +2,7 @@
 window.addEventListener("load" , function(){
   //  farmswiper 스와이퍼 기능
   const swFarmswiper = new Swiper(".sw-farmswiper", {
-    speed: 2500,
+    speed: 3000,
     centeredSlides: true,
       slidesPerView: 4.2,
       spaceBetween: 20,
@@ -13,6 +13,7 @@ window.addEventListener("load" , function(){
       },
     });
   }) 
+  
 // jquery
 // $(document).ready(function () {
 
