@@ -5,12 +5,9 @@
 }
 .farmswiper img{
   border-radius: 10%;
+  max-width: 100%;
 }
 .farmswiper .title{
   margin-top: 100px;
   line-height: 150%;
-}
-.test{
-  width: 400px;
-  height: 400px;
 }
