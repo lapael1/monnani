@@ -9,13 +9,12 @@
   right: 20px;
   bottom: 20px;
   z-index: 9999;
-  width: 60px;
-  height: 60px;
+  width: 110px;
+  height: 110px;
   border: none;
   cursor: pointer;
   animation: updown 1.5s infinite;
 }
-
 @keyframes updown {
   0% {
     transform: translateY(0);
