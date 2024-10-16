@@ -197,9 +197,6 @@
             <div class="swiper-slide">
               <a href="#"><img src="images/farmswiper/ugly12.png" alt="농작물10" /></a>
             </div>
-            <!-- <div class="swiper-slide">
-                <a href="#"><img src="images/farmswiper/ugly10.png" alt="농작물10"></a>
-              </div> -->
           </div>
           <!-- 구출버튼 -->
           <div class="btnwrap">
@@ -257,23 +254,26 @@
       <section class="minibanner">
         <div class="inner">
           <!-- 스와이퍼 전체영역 -->
-          <div class="banner-inner">
+          <div class="banner-inner" id="data-banner">
             <!-- 이미지 스와이퍼 -->
             <div class="swiper sw-banner">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <a href="#">
-                    <img src="images/banner/pc_01.png" alt="배너" />
+                    <img src="images/banner/pc_01.png" alt="배너" class="banner_pc" />
+                    <img src="images/banner/mo_01.png" alt="배너" class="banner_mo" />
                   </a>
                 </div>
                 <div class="swiper-slide">
                   <a href="#">
-                    <img src="images/banner/pc_02.png" alt="배너" />
+                    <img src="images/banner/pc_02.png" alt="배너" class="banner_pc" />
+                    <img src="images/banner/mo_02.png" alt="배너" class="banner_mo" />
                   </a>
                 </div>
                 <div class="swiper-slide">
                   <a href="#">
-                    <img src="images/banner/pc_03.png" alt="배너" />
+                    <img src="images/banner/pc_03.png" alt="배너" class="banner_pc" />
+                    <img src="images/banner/mo_03.png" alt="배너" class="banner_mo" />
                   </a>
                 </div>
               </div>
@@ -316,7 +316,7 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="images/banner/gallery_1.png" alt="이미지" />
+                  <img src="images/banner/gallery_3.png" alt="이미지" />
                   <div class="gallery-info">
                     <p>농촌 봉사활동</p>
                   </div>
@@ -324,7 +324,7 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="images/banner/gallery_1.png" alt="이미지" />
+                  <img src="images/banner/gallery_4.png" alt="이미지" />
                   <div class="gallery-info">
                     <p>농촌 체험활동</p>
                   </div>
@@ -348,9 +348,18 @@
               <h3>고객센터 <span class="number">070.1234.5678</span></h3>
               <div class="footer-cs">
                 <div class="cs">
-                  <p>월~금요일 <span>09:00 ~ 18:00 (점심시간 12:00 ~ 13:00)</span></p>
-                  <p>토요일 <span>09:00 ~ 12:00 </span></p>
-                  <p>일요일, 공휴일 <span>휴무</span></p>
+                  <!-- 요일 -->
+                  <div class="cs-day">
+                    <p>월~금요일</p>
+                    <p>토요일</p>
+                    <p>일요일, 공휴일</p>
+                  </div>
+                  <!-- 시간 -->
+                  <div class="cs-time">
+                    <p>09:00 ~ 18:00 (점심시간 12:00 ~ 13:00)</p>
+                    <p>09:00 ~ 12:00</p>
+                    <p>휴무</p>
+                  </div>
                 </div>
                 <div class="cs-sns">
                   <a href="#" target="_blank">

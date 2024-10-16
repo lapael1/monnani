@@ -2,14 +2,14 @@
 .minibanner {
   width: 100%;
   height: auto;
-  padding: 30px 10px;
+  padding: 40px 10px;
 }
 .banner-inner {
   position: relative;
   /* display: block; */
   width: 100%;
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 10px;
 }
 .sw-banner a {
@@ -20,6 +20,10 @@
   height: auto;
   margin-bottom: 25px;
 }
+.banner_mo{
+  display: none;
+}
+
 /* 구출하기 버튼 */
 .buybtn {
   display: flex; /* 플렉스 박스로 변경 */
@@ -32,8 +36,8 @@
   border-radius: 30px;
   margin: 0 auto; /* 부모 요소에서 가로 방향으로 중앙 정렬 */
   margin-top: 3%;
-}
 
+}
 .buybtn a {
   font-size: 30px;
   color: #fff;
@@ -41,10 +45,7 @@
   padding: 10px;
   display: block; /* a 태그를 블록 요소로 설정 */
   text-align: center; /* 텍스트 중앙 정렬 */
-  
 }
-
-
 /* pagination */
 .sw-banner-control {
   position: relative;
@@ -53,14 +54,16 @@
 }
 .swiper-pagination-bullet {
   background-color: black;
+
 }
 
 /* 비주얼 콘트롤러 */
 .banner-control {
   position: absolute;
   display: block;
-  bottom: 97px;
+  bottom: 100px;
   right: calc(50% - 600px);
+  top: calc(60%);
   z-index: 9;
 }
 .banner-play {
@@ -71,6 +74,7 @@
   background-position: 0 0;
   cursor: pointer;
   float: left;
+  top: 50px;
 }
 .banner-play.active {
   background-position: 0 -30px;
@@ -78,7 +82,7 @@
 .banner-pg {
   position: relative;
   display: block;
-  width: 55px;
+  width: 30px;
   height: 30px;
   /* background: url("../../images/banner/visualNum.png") no-repeat; */
   text-align: center;
@@ -87,9 +91,21 @@
   color: #fff;
   line-height: 30px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   margin-left: 5px;
   float: left;
-  bottom: 0;
   letter-spacing: -1.5px;
+}
+
+/* 반응형 */
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 800px){
+  .banner_pc{
+    display: none;
+  }
+  .banner_mo{
+    display: block;
+  }
 }

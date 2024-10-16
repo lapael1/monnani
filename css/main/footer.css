@@ -1,5 +1,5 @@
 @charset "utf-8";
-.footer {
+.footer-wrap {
   background-color: #fdf4ee;
   width: 100%;
   height: auto;
@@ -13,55 +13,63 @@
   font-weight: bold;
   font-size: 25px;
   color: black;
-  right: 10%;
+  margin-left: 20px;
 }
 .inner .number {
   font-weight: bold;
   color: #ff6741;
 }
-.inner .cs p,
-span {
-  padding: 5px;
-  font-weight: 900;
+/* cs (요일,시간) */
+.cs {
+  display: flex;
   font-size: 20px;
+  margin-left: 10px;
+  font-weight: 600;
 }
+.cs-time {
+  margin-left: 20px;
+}
+.cs p {
+  padding: 5px;
+}
+
+/* cs(sns) */
+.cs-sns {
+  margin-right: 15px;
+}
+.cs-circle:hover {
+  fill: #ff6741;
+  transition: all 0.2s;
+}
+
+/* cs(name) */
 .footer hr {
   color: black;
+  margin: 5px 5px;
 }
 .cs-name p,
 span {
-  padding: 10px;
+  padding: 5px;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.cs-name {
+  margin: 10px 15px;
 }
 .name-mail {
   color: #ff6741;
 }
+/* cs-copy */
 .cs-copy {
   display: flex;
   padding: 20px 10px;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 600;
   justify-content: space-between;
+  margin-left: 10px;
 }
-/* .cs-sns {
-  -webkit-text-size-adjust: 100%;
-  --swiper-theme-color: #007aff;
-  --swiper-navigation-size: 44px;
-  line-height: normal;
-  letter-spacing: -0.04em;
-  color: #fff;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
-  background: transparent;
-  font-family: inherit;
-  width: calc(100% - 120px);
-  text-align: right;
-} */
-.cs-circle:hover{
-  fill: #ff6741;
-  transition: all 0.2s;
+
+/* 반응형 */
+@media screen and (max-width: 1200px) {
 }
