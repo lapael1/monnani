@@ -9,10 +9,8 @@
     <meta name="description" content="몬나니농장에서는 모양은 못났지만 맛있고 신선한 못난이 농산물을 저렴하게 제공합니다. 신선한 채소와 과일을 환경을 생각하며 구매하세요!" />
     <meta name="keywords" content="못난이 농산물, 신선한 농산물, 할인 농산물, 환경친화적 소비, 몬나니농장" />
     <meta name="author" content="몬나니농장 운영팀" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="몬나니농장 - 신선한 농산물 할인 판매" />
     <meta property="og:description" content="모양은 못났지만 맛있는 농산물을 저렴하게 구매하세요!" />
-
 
     <!-- 버셀 주소 만들고 넣기-->
     <meta property="og:image" content="https://yourwebsite.com/ugly-produce.jpg" />
@@ -32,7 +30,8 @@
     <!-- js -->
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <script src="js/jquery-1.12.3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- AOS.js -->
@@ -49,7 +48,7 @@
     <script src="js/main/review.js"></script>
     <script src="js/main/minibanner.js"></script>
     <script src="js/main/footer.js"></script>
-    <script src="js/main/header.js"></script>
+    <script src="js/main/count.js"></script>
     <title>몬나니농장</title>
   </head>
   <body>
@@ -119,7 +118,7 @@
           </div>
         </section>
       </section>
-      
+
       <!-- recommend영역 -->
       <section class="recommend">
         <!-- 타이틀 -->
@@ -136,23 +135,18 @@
                 <img src="images/mainImg1.png" alt="내용1" />
                 <p class="rec-title">식자재가 남아서 버리시는 분</p>
                 <p class="rec-txt">다양한 농산물을 소량으로 제공하여, <br />음식물 낭비를 줄여요!</p>
-
               </div>
               <!-- 내용2 -->
               <div class="rec-content2 rec-content" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
                 <img src="images/mainImg2.png" alt="내용2" />
                 <p class="rec-title">합리적인 소비를 원하시는 분</p>
-                <p class="rec-txt">품질은 겉모습과 상관없어요! <br>다르지만 특별한 친환경 농산물을 <br>시중보다 20~30% 저렴한 가격으로 만날 수 있어요</p>
+                <p class="rec-txt">품질은 겉모습과 상관없어요! <br />다르지만 특별한 친환경 농산물을 <br />시중보다 20~30% 저렴한 가격으로 만날 수 있어요</p>
               </div>
               <!-- 내용3 -->
               <div class="rec-content3 rec-content" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">
                 <img src="images/mainImg3.png" alt="내용3" />
                 <p class="rec-title">가치있는 소비를 원하시는 분</p>
-                <p class="rec-txt">
-                  다양한 식자재를 구매하시면서, 환경까지 생각할 수 있어요.
-                  몬나니농장은 최소한의 포장과 리사이클 친환경 포장지를
-                  활용하여, 여러분께 전달해요.
-                </p>
+                <p class="rec-txt">다양한 식자재를 구매하시면서, 환경까지 생각할 수 있어요. 몬나니농장은 최소한의 포장과 리사이클 친환경 포장지를 활용하여, 여러분께 전달해요.</p>
               </div>
             </div>
           </div>
@@ -161,52 +155,102 @@
       <!-- farmswiper 영역 -->
       <section class="farmswiper">
         <!-- title -->
-         <div class="title-wrap">
-          <h2 class="title">이쁜이도, 못난이도
-            <br>모두 구출되기를 기다리고있어요.</h2>
-         </div>
-         <!-- SWiper -->
-          <div class="swiper sw-farmswiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="#"><img src="images/farmswiper/ugly1.png" alt="농작물1" class="test"></a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#"><img src="images/farmswiper/ugly2.png" alt="농작물2"></a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#"><img src="images/farmswiper/ugly3.png" alt="농작물3"></a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#"><img src="images/farmswiper/ugly4.png" alt="농작물4"></a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#"><img src="images/farmswiper/ugly5.png" alt="농작물5"></a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#"><img src="images/farmswiper/ugly6.png" alt="농작물6"></a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#"><img src="images/farmswiper/ugly7.png" alt="농작물7"></a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#"><img src="images/farmswiper/ugly8.png" alt="농작물8"></a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#"><img src="images/farmswiper/ugly9.png" alt="농작물9"></a>
-              </div>
-              <!-- <div class="swiper-slide">
+        <div class="title-wrap">
+          <h2 class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">이쁜이도, 못난이도 <br />모두 구출되기를 기다리고있어요.</h2>
+        </div>
+        <!-- SWiper -->
+        <div class="swiper sw-farmswiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"><img src="images/farmswiper/ugly1.png" alt="농작물1" class="test" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/farmswiper/ugly2.png" alt="농작물2" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/farmswiper/ugly3.png" alt="농작물3" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/farmswiper/ugly4.png" alt="농작물4" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/farmswiper/ugly5.png" alt="농작물5" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/farmswiper/ugly6.png" alt="농작물6" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/farmswiper/ugly7.png" alt="농작물7" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/farmswiper/ugly8.png" alt="농작물8" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/farmswiper/ugly9.png" alt="농작물9" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/farmswiper/ugly10.png" alt="농작물10" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/farmswiper/ugly11.png" alt="농작물10" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/farmswiper/ugly12.png" alt="농작물10" /></a>
+            </div>
+            <!-- <div class="swiper-slide">
                 <a href="#"><img src="images/farmswiper/ugly10.png" alt="농작물10"></a>
               </div> -->
-            </div>
           </div>
+          <!-- 구출버튼 -->
+          <div class="btnwrap">
+            <button class="buybtn">
+              <a href="#">구출하러가기</a>
+            </button>
+          </div>
+        </div>
       </section>
       <!-- count영역 -->
       <section class="count">
-        <div class="inner"></div>
+        <div class="title-wrap">
+          <h2 class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            못난이 농산물 구출이<br />
+            어떤 변화를 만들고 있을까요?
+          </h2>
+        </div>
+        <div class="inner">
+          <div class="count-wrap">
+            <div class="count-left">
+              <ul class="count-left-ul">
+                <li>구출한 농산물</li>
+                <li id="rescued-produce">2,226,227kg</li>
+              </ul>
+            </div>
+
+            <div class="count-middle"></div>
+
+            <div class="count-right">
+              <ul class="count-right-ul1 count-right-ul">
+                <li>아낀 물의양<sup> million litres</sup></li>
+                <li id="saved-water">44,970</li>
+              </ul>
+              <ul class="count-right-ul2 count-right-ul">
+                <li>아낀 플라스틱 수</li>
+                <li id="saved-plastic">1,149,335</li>
+              </ul>
+              <ul class="count-right-ul3 count-right-ul">
+                <li>절감한 탄소<sup> kg</sup></li>
+                <li id="reduced-carbon">1,331,061</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
+
       <!-- review영역 -->
       <section class="review">
+        <div class="title-wrap">
+          <h2 class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">몬나니 농장은 <br />생산자와 소비자가 함께 만들어가요</h2>
+        </div>
         <div class="inner"></div>
       </section>
       <!-- minibanner영역 -->
@@ -231,7 +275,6 @@
                   <a href="#">
                     <img src="images/banner/pc_03.png" alt="배너" />
                   </a>
-
                 </div>
               </div>
             </div>
@@ -242,11 +285,10 @@
               <!-- <button class="banner-more"></button> -->
             </div>
 
-
             <!-- 구출하기 버튼 -->
-            <div class="buy-button-inner">
+            <button class="buybtn">
               <a href="#">구출하러가기</a>
-            </div>
+            </button>
           </div>
         </div>
       </section>
@@ -360,8 +402,8 @@
     </div>
   </body>
   <!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
