@@ -1,1 +1,67 @@
 @charset "utf-8";
+.footer {
+  background-color: #fdf4ee;
+  width: 100%;
+  height: auto;
+}
+.footer-cs {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+.inner h3 {
+  font-weight: bold;
+  font-size: 25px;
+  color: black;
+  right: 10%;
+}
+.inner .number {
+  font-weight: bold;
+  color: #ff6741;
+}
+.inner .cs p,
+span {
+  padding: 5px;
+  font-weight: 900;
+  font-size: 20px;
+}
+.footer hr {
+  color: black;
+}
+.cs-name p,
+span {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 800;
+}
+.name-mail {
+  color: #ff6741;
+}
+.cs-copy {
+  display: flex;
+  padding: 20px 10px;
+  font-size: 20px;
+  font-weight: 800;
+  justify-content: space-between;
+}
+/* .cs-sns {
+  -webkit-text-size-adjust: 100%;
+  --swiper-theme-color: #007aff;
+  --swiper-navigation-size: 44px;
+  line-height: normal;
+  letter-spacing: -0.04em;
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: inherit;
+  width: calc(100% - 120px);
+  text-align: right;
+} */
+.cs-circle:hover{
+  fill: #ff6741;
+  transition: all 0.2s;
+}
