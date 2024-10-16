@@ -5,7 +5,11 @@ h1 {
 }
 .header {
   width: 100%;
-  height: 130px;
+  height: 100px;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+  backdrop-filter: blur(10px); /* 배경을 흐리게 설정 */
 }
 .header .inner {
   width: 100%;
@@ -28,7 +32,7 @@ h1 {
   margin-right: 15px;
 }
 .header-wrap img {
-  height: 90px;
+  height: 100%;
 }
 .header ul {
   display: flex;
