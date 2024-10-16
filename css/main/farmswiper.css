@@ -1,1 +1,16 @@
 @charset "utf-8";
+.farmswiper{
+  position: relative;
+  display: block;
+}
+.farmswiper img{
+  border-radius: 10%;
+}
+.farmswiper .title{
+  margin-top: 100px;
+  line-height: 150%;
+}
+.test{
+  width: 400px;
+  height: 400px;
+}
