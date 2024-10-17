@@ -1,46 +1,47 @@
 @charset "utf-8";
-.introduction{
+
+/* 기본 스타일 */
+.introduction {
   width: 100%;
   display: block;
   position: relative;
   margin-top: 100px;
 }
-.introduction2{
+.introduction2 {
   display: block;
   position: relative;
   background-color: #FFF9EA;
   margin-top: 100px;
 }
-.introduction-wrap{
+.introduction-wrap {
   display: flex;
 }
-.introduction img{
+.introduction img {
   border-radius: 10%;
 }
-.intro-left{
+.intro-left {
   margin-right: 50px;
 }
-
-.intro-right h3{
+.intro-right h3 {
   margin-top: 30px;
 }
-.intro-right .p1{
+.intro-right .p1 {
   margin-top: 30px;
 }
-.intro-right .p2{
+.intro-right .p2 {
   margin-top: 30px;
 }
-.intro-right .p3{
+.intro-right .p3 {
   margin-top: 30px;
 }
-.introduction h1{
+.introduction h1, .introduction2 h1 {
   font-size: 40px;
   font-weight: bold;
 }
-.introduction h3::after{
+.introduction h3::after {
   content: "";
   display: block;
-  width: 100%;              /* h2의 너비에 맞게 설정 */
+  width: 100%; /* h3의 너비에 맞게 설정 */
   height: 8px;
   border-radius: 5px;
   background-color: #FF6741;
@@ -49,32 +50,95 @@
   left: 0;
   z-index: -1;
 }
-.introduction h3{
+.introduction2 h3::after{
+  content: "";
+  display: block;
+  width: 100%; /* h3의 너비에 맞게 설정 */
+  height: 8px;
+  border-radius: 5px;
+  background-color: #FF6741;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: -1;
+}
+.introduction h3, .introduction2 h3 {
   display: inline-block;
   font-size: 30px;
 }
-.introduction p{
+.introduction p, .introduction2 p {
   font-size: 21px;
   line-height: 150%;
 }
+
 /* inroduction2 */
-.intro2-left{
+.intro2-left {
   margin-right: 50px;
 }
-.intro2-left h1{
+.intro2-left h1 {
   margin-top: 50px;
 }
-.intro2-left h3{
+.intro2-left h3 {
   margin-top: 30px;
 }
-.intro2-left .p4{
+.intro2-left .p4 {
   margin-top: 30px;
 }
-.intro2-left .p5{
+.intro2-left .p5 {
   margin-top: 30px;
   margin-bottom: 50px;
 }
-.intro2-right{
+.intro2-right {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+/* 반응형 스타일 */
+/* 태블릿 및 작은 화면 */
+@media (max-width: 1024px) {
+  .introduction h1 {
+    font-size: 35px;
+  }
+  .introduction h3 {
+    font-size: 28px;
+  }
+  .introduction p {
+    font-size: 18px;
+  }
+  /* .introduction-wrap {
+    flex-direction: column;
+    align-items: center;
+  } */
+  .intro-left {
+    margin-right: 0;
+  }
+  .intro2-left {
+    margin-right: 0;
+  }
+}
+
+/* 모바일 화면 대응 */
+@media (max-width: 768px) {
+  .introduction h1 {
+    font-size: 30px;
+  }
+  .introduction h3 {
+    font-size: 25px;
+  }
+  .introduction p {
+    font-size: 16px;
+  }
+}
+
+/* 작은 모바일 화면 대응 */
+@media (max-width: 480px) {
+  .introduction h1 {
+    font-size: 25px;
+  }
+  .introduction h3 {
+    font-size: 20px;
+  }
+  .introduction p {
+    font-size: 14px;
+  }
 }
