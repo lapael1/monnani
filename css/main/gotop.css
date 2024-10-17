@@ -7,10 +7,10 @@
 .gotop img {
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 80px;
   z-index: 9999;
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
   border: none;
   cursor: pointer;
   animation: updown 1.5s infinite;
@@ -25,4 +25,19 @@
   100% {
     transform: translateY(0);
   }
+}
+.topbtn{
+  position: relative;
+  display: contents;
+}
+
+.topbtn img{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
 }
