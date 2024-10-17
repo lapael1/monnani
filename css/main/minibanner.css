@@ -31,7 +31,7 @@
   justify-content: center; /* 수평 중앙 정렬 */
   align-items: center; /* 수직 중앙 정렬 */
   min-width: 375px;
-  min-height: 76px;
+  min-height: 70px;
   background-color: #ff6741;
   border: none;
   border-radius: 30px;
