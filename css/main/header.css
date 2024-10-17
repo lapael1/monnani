@@ -8,7 +8,7 @@
   backdrop-filter: blur(10px); /* 배경을 흐리게 설정 */
   transition: background-color 0.5s ease, backdrop-filter 0.5s ease; /* 0.5초 동안 자연스럽게 변환 */
 }
-.header.active{
+.header.active {
   background-color: white;
   backdrop-filter: none;
 }

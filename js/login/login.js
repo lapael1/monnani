@@ -11,7 +11,11 @@ window.addEventListener("load", function () {
     );
     if (userFind) {
       localStorage.setItem("userFind", JSON.stringify(userFind));
-      alert(`${id}`);
+      alert(`${userFind.name}님 반갑습니다`);
+      window.location.href = `index.html?name=${encodeURIComponent(userFind.name)}`
+    }else{
+      alert("로그인 정보가 일치하지 않습니다. 다시 시도해주세요.")
+      loginForm.reset()
     }
   });
 });
