@@ -183,10 +183,8 @@ span {
 }
 
 @media screen and (max-width: 901px) {
-  .cs-mb {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 5px;
+  .cs-name {
+    display: none;
   }
   .cs-copy {
     /* display: flex; */
@@ -197,7 +195,38 @@ span {
     margin-left: 10px;
     gap: 35px;
   }
-  .cs-name {
-    display: none;
+  .cs-mb {
+    display: block;
+    margin: 10px;
+    padding: 0 10px;
+  }
+  .cs-mb p {
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 550;
+    margin-bottom: 5px;
+  }
+  .cs-mb span {
+    color: #ff6741;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 0 10px;
+  }
+  .cs-copy {
+    display: flex;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: 550;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .cs-copy {
+    display: block;
+    padding: 15px 15px;
+    font-size: 16px;
+    font-weight: 550;
+    margin-left: 15px;
   }
 }
