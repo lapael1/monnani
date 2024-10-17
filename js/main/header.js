@@ -1,24 +1,29 @@
 window.addEventListener("load", function () {
+  window.addEventListener("scroll", function () {
+    const header = this.document.querySelector(".header");
+  });
+
   showInitDashboard();
+
   function showInitDashboard() {
     // URL에서 쿼리 매개변수 가져오기
     const params = new URLSearchParams(window.location.search);
-    const usernameFromURL = params.get("username");
+    const username = params.get("name"); // 여기서 name으로 변경
 
     // localStorage에 저장된 로그인된 사용자 정보 확인
-    // const loggedInUser = JSON.parse(localStorage.getItem("userFind")) || {};
+    const loggedInUser = JSON.parse(localStorage.getItem("userFind")) || {};
 
     // URL에서 가져온 이름이 있으면 그 값을 사용하고, 없으면 localStorage의 값을 사용
-    // const username = usernameFromURL || loggedInUser.name;
+    const displayName = username || loggedInUser.username; // 여기서 loggedInUser.username 사용
 
-    if (username) {
+    if (displayName) {
       // 로그인 상태일 경우
       document.getElementById("login-button").style.display = "none"; // 로그인 버튼 숨김
       document.getElementById("signup-button").style.display = "none"; // 회원가입 버튼 숨김
       document.getElementById("login-display").style.display = "block"; // 로그인 사용자 정보 표시
 
       // 사용자 이름을 name-display에 출력
-      document.getElementById("name-display").textContent = `${username}님`;
+      document.getElementById("name-display").textContent = `${displayName}님`;
     } else {
       // 로그인 정보가 없으면 로그인 상태 초기화 (페이지 로드 시 체크)
       document.getElementById("login-button").style.display = "block"; // 로그인 버튼 표시
@@ -35,13 +40,14 @@ window.addEventListener("load", function () {
     clearUserData();
     clearUsernameParam();
   });
+
   function clearUserData() {
-    localStorage.removeItem("username");
+    localStorage.removeItem("userFind"); // 로그인 데이터 삭제
   }
 
   function clearUsernameParam() {
     var url = new URL(window.location.href);
-    url.searchParams.delete("username");
+    url.searchParams.delete("name"); // 여기서 name으로 변경
     window.history.replaceState({}, "", url.toString());
   }
 });
