@@ -1,8 +1,4 @@
-// js
-window.onload = function () {
-
-}
-// jquery
-$(document).ready(function () {
-
-})
+window.addEventListener("load", function () {
+  
+  
+});
