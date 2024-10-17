@@ -1,25 +1,37 @@
 @charset "utf-8";
-.footer-wrap {
+.footer {
   background-color: #fdf4ee;
+}
+.footer-wrap {
   width: 100%;
   height: auto;
+}
+.footer-wrap img {
+  width: 250px;
+  padding-left: 10px;
+}
+.footer h3 {
+  font-weight: bold;
+  font-size: 25px;
+  color: black;
+  margin-left: 26px;
+}
+.number {
+  font-weight: bold;
+  color: #ff6741;
+}
+/* cs(고객센터) */
+.cs-call {
+  display: flex;
+  align-items: center;
 }
 .footer-cs {
   display: flex;
   justify-content: space-between;
   padding: 15px 10px;
 }
-.footer h3 {
-  font-weight: bold;
-  font-size: 25px;
-  color: black;
-  margin-left: 20px;
-}
-.inner .number {
-  font-weight: bold;
-  color: #ff6741;
-}
 /* cs (요일,시간) */
+
 .cs {
   display: flex;
   font-size: 20px;
@@ -53,6 +65,7 @@ span {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 5px;
+  white-space: no-wrap;
 }
 .cs-name {
   margin: 10px 15px;

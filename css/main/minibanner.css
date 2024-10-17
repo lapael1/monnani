@@ -1,7 +1,7 @@
 @charset "utf-8";
 .minibanner {
   width: 100%;
-  height: auto;
+  /* height: auto; */
   padding: 40px 10px;
 }
 .banner-inner {
@@ -10,17 +10,18 @@
   width: 100%;
   max-width: 1280px;
   margin: 10px auto;
-  padding: 10px;
+}
+.sw-banner {
+  position: relative;
 }
 .sw-banner a {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .sw-banner a img {
   width: 100%;
-  height: auto;
-  margin-bottom: 25px;
+  /* height: auto; */
 }
-.banner_mo{
+.banner_mo {
   display: none;
 }
 
@@ -36,7 +37,6 @@
   border-radius: 30px;
   margin: 0 auto; /* 부모 요소에서 가로 방향으로 중앙 정렬 */
   margin-top: 3%;
-
 }
 .buybtn a {
   font-size: 30px;
@@ -46,44 +46,37 @@
   display: block; /* a 태그를 블록 요소로 설정 */
   text-align: center; /* 텍스트 중앙 정렬 */
 }
-/* pagination */
-.sw-banner-control {
-  position: relative;
-  text-align: center;
-  display: none;
-}
-.swiper-pagination-bullet {
-  background-color: black;
-
-}
 
 /* 비주얼 콘트롤러 */
 .banner-control {
+  /* width: 200px; */
   position: absolute;
-  display: block;
-  bottom: 100px;
-  right: calc(50% - 600px);
-  top: calc(60%);
-  z-index: 9;
+  /* display: inside; */
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  color: #fff;
 }
 .banner-play {
+  display: block;
   width: 30px;
   height: 30px;
   background: url("../../images/banner/visualPlay.png") no-repeat;
   border: none;
   background-position: 0 0;
   cursor: pointer;
-  float: left;
-  top: 50px;
+  /* float: left; */
+  /* top: 50px; */
 }
 .banner-play.active {
   background-position: 0 -30px;
 }
 .banner-pg {
-  position: relative;
+  /* position: relative; */
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 80px !important;
   /* background: url("../../images/banner/visualNum.png") no-repeat; */
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3);
@@ -93,19 +86,22 @@
   font-size: 14px;
   font-weight: 600;
   margin-left: 5px;
-  float: left;
   letter-spacing: -1.5px;
+}
+.swiper-pagination-current,
+.swiper-pagination-total {
+  color: #fff;
 }
 
 /* 반응형 */
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1200px) {
 }
 
-@media screen and (max-width: 800px){
-  .banner_pc{
+@media screen and (max-width: 800px) {
+  .banner_pc {
     display: none;
   }
-  .banner_mo{
+  .banner_mo {
     display: block;
   }
 }
