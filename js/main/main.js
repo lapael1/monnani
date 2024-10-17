@@ -6,4 +6,13 @@ $(document).ready(function () {
       behavior: "smooth",
     });
   });
+
+  var swiper = new Swiper(".sw-visual",{
+    loop:true,
+    autoplay:{
+      delay: 5000
+    },
+    speed:1500
+  })
 });
+
