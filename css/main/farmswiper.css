@@ -11,3 +11,52 @@
   margin-top: 100px;
   line-height: 150%;
 }
+/* sw-farmswiper 영역 안에서만 적용되는 스타일 */
+.sw-farmswiper .swiper-slide .overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.sw-farmswiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* 마우스 오버 시 어두워지는 효과 */
+.sw-farmswiper .swiper-slide .overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* 기본 투명 */
+  transition: background-color 0.3s ease;
+}
+
+.sw-farmswiper .swiper-slide:hover .overlay::before {
+  background-color: rgba(0, 0, 0, 0.5); /* 어두워짐 */
+}
+
+/* 텍스트 오버레이 스타일 */
+.sw-farmswiper .text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* 마우스 오버 시 텍스트가 나타남 */
+.sw-farmswiper .swiper-slide:hover .text-overlay {
+  opacity: 1;
+}
+.overlay{
+  border-radius: 10%;
+}
