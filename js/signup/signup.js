@@ -6,13 +6,13 @@ window.addEventListener("load", function () {
     const idInput = document.getElementById("signup-id");
     const pwInput = document.getElementById("signup-pw");
     const pwChkInput = document.getElementById("signup-pw-chk");
-    const nameInput = document.getElementById("signup-name");
+    const usernameInput = document.getElementById("signup-name");
     const emailInput = document.getElementById("signup-email");
     const phoneInput = document.getElementById("signup-phone");
     const id = idInput.value.trim();
     const pw = pwInput.value.trim();
     const pwChk = pwChkInput.value.trim();
-    const name = nameInput.value.trim();
+    const username = usernameInput.value.trim();
     const email = emailInput.value.trim();
     const phone = phoneInput.value.trim();
     // 아이디는 영어와 숫자로만
@@ -37,7 +37,7 @@ window.addEventListener("load", function () {
     const newUser = {
       id: id,
       password: pw,
-      name: name,
+      username: username,
     };
     const users = JSON.parse(localStorage.getItem("users")) || [];
     users.push(newUser);
