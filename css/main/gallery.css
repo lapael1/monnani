@@ -2,18 +2,18 @@
 .gallery {
   width: 100%;
   height: auto;
+  background-color: #fff9ea;
 }
 .gallery h2 {
   text-align: center;
   padding: 30px 10px;
   font-size: 36px;
   font-weight: bold;
+  background-color: #fff;
 }
 .gallery-inner {
-  background-color: #fff9ea;
   width: 100%;
   height: auto;
-  margin: 30px 20px;
 }
 .gallery-inner ul {
   display: flex;
@@ -34,6 +34,7 @@
 .gallery-button {
   width: 100%;
   padding: 30px 0;
+  background-color: #fff;
 }
 .gallery-button a {
   text-decoration: none;
@@ -56,5 +57,12 @@
     width: 90%;
     height: 90%;
   }
-}
 
+  .gallery h2 {
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #fff;
+  }
+}
