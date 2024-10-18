@@ -42,9 +42,7 @@ h2.title {
 }
 
 .rec-content {
-  min-width: 380px;
-  min-height: 320px;
-  height: 100%;
+  max-width: 380px;
   width: 100%;
   background-color: #F5F5F7;
   border-radius: 10px;
@@ -68,9 +66,7 @@ h2.title {
   font-size: 20px;
 }
 .rec-txt{
-  padding-top: 15%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 15% 10%;
   line-height: 150%;
   font-size: 18px;
 }
@@ -82,7 +78,7 @@ h2.title {
 @media (max-width: 1024px) {
   .rec-content {
     min-width: 300px; /* 태블릿에서 최소 너비 축소 */
-    width: 45%; /* 태블릿에서 카드가 2개씩 배치되도록 */
+  
     margin-right: 5%;
   }
 }
@@ -99,15 +95,16 @@ h2.title {
     flex-direction: column; /* 세로 정렬로 변경 */
     align-items: center; /* 중앙 정렬 */
   }
-
+  .rec-txt{
+    padding-top: 10%;
+  }
 }
 
 
 /* 작은 모바일 화면 대응 */
 @media (max-width: 480px) {
   .rec-content {
-    min-width: 100%; /* 작은 화면에서는 하나씩 배치 */
-    width: 100%;
+    width: 90%;
     margin-right: 0;
   }
 }
