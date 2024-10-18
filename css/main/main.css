@@ -38,6 +38,116 @@ a {
 h2.title{
   line-height: 130%;
 }
+/* 구출하기 버튼 */
+.buybtn {
+  display: flex; /* 플렉스 박스로 변경 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  min-width: 300px;
+  min-height: 70px;
+  background-color: #ff6741;
+  border: none;
+  border-radius: 30px;
+  margin: 0 auto; /* 부모 요소에서 가로 방향으로 중앙 정렬 */
+  margin-top: 3%;
+}
+.buybtn a {
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  display: block; /* a 태그를 블록 요소로 설정 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
 .buybtn:hover{
   background-color: #E2360A;
+}
+
+@media screen and (max-width : 768px) {
+  h2.title{
+    font-size: 30px;
+  }
+  .buybtn, .galbtn{
+    min-width: 260px;
+    min-height: 40px
+}
+  .buybtn a, .galbtn a{
+    font-size: 24px;
+    padding: 8px;
+  }
+}
+@media screen and (max-width : 484px){
+  h2.title{
+    font-size: 26px;
+  }
+  .buybtn, .galbtn{
+    min-width: 230px;
+    min-height: 30px;
+    margin-top: 7%;
+}
+  .buybtn a, .galbtn a{
+    font-size: 20px;
+    padding: 7px;
+  }
+}
+@media screen and (max-width : 420px){
+  h2.title{
+    font-size: 24px;
+  }
+  .buybtn, .galbtn{
+    min-width: 200px;
+    min-height: 30px;
+    margin-top: 7%;
+
+}
+  .buybtn a, .galbtn a{
+    font-size: 18px;
+    padding: 6px;
+  }
+}
+@media screen and (max-width : 390px){
+  h2.title{
+    font-size: 22px;
+  }
+  .buybtn, .galbtn{
+    min-width: 180px;
+    min-height: 30px;
+    margin-top: 6%;
+
+}
+  .buybtn a, .galbtn a{
+    font-size: 17px;
+    padding: 6px;
+  }
+}
+
+@media screen and (max-width : 355px){
+  h2.title{
+    font-size: 19px;
+  }
+  .buybtn, .galbtn{
+    min-width: 175px;
+    min-height: 28px;
+    margin-top: 5%;
+
+}
+  .buybtn a, .galbtn a{
+    font-size: 16px;
+    padding: 6px;
+  }
+}
+@media screen and (max-width : 320px){
+  h2.title{
+    font-size: 18px;
+  }
+  .buybtn, .galbtn{
+    min-width: 172px;
+    min-height: 25px;
+    margin-top: 5%;
+
+}
+  .buybtn a, .galbtn a{
+    font-size: 15px;
+    padding: 5px;
+  }
 }
