@@ -7,12 +7,11 @@ $(document).ready(function () {
     });
   });
 
-  var swiper = new Swiper(".sw-visual",{
-    loop:true,
-    autoplay:{
-      delay: 5000
+  var swiper = new Swiper(".sw-visual", {
+    loop: true,
+    autoplay: {
+      delay: 5000,
     },
-    speed:1500
-  })
+    speed: 1500,
+  });
 });
-
