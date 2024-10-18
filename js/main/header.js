@@ -1,8 +1,23 @@
-window.addEventListener("load", function () {
-  window.addEventListener("scroll", function () {
-    const header = this.document.querySelector(".header");
-  });
+window.onload = function () {
+  const header = document.querySelector(".header");
 
+  function headerScrollCss() {
+    const scrollPosition = window.scrollY; // 현재 스크롤 위치
+    const headerHeight = header.offsetHeight; // 헤더 높이 (100px)
+
+    // 스크롤 위치가 헤더 높이만큼 내려가면 active 클래스 추가
+    if (scrollPosition >= headerHeight) {
+      header.classList.add("active");
+    } else {
+      header.classList.remove("active");
+    }
+  }
+
+  // 스크롤 이벤트 리스너 추가 (addEventListener 사용)
+  window.addEventListener("scroll", headerScrollCss);
+};
+
+window.addEventListener("load", function () {
   showInitDashboard();
 
   function showInitDashboard() {
