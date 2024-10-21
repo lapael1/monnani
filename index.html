@@ -86,30 +86,34 @@
           <div class="inner">
             <a href="index.html" class="header-logo"><img src="images/logo.png" alt="logo" /></a>
             <div id="header-close" class="header-close">
-              <img src="images/icons/icon_menu.png" alt="menu" />
+              <img src="images/icons/icon_menu.png" alt="menu" id="menu-icon" />
             </div>
-            <ul class="header-nav">
-              <li><a href="">브랜드</a></li>
-              <li><a href="">정기배송</a></li>
-              <li><a href="">제품구매</a></li>
-              <li><a href="">커뮤니티</a></li>
-              <li><a href="">갤러리</a></li>
-              <li><a href="">문의하기</a></li>
-            </ul>
-            <ul class="header-login">
-              <li><a href="login.html" id="login-button">로그인</a></li>
-              <li><a href="signup.html" id="signup-button">회원가입</a></li>
-              <li style="display: none" id="login-display">
-                <a href="#">
+            <div class="header-toggle">
+              <ul class="header-nav" id="header-nav">
+                <li><a href="">브랜드</a></li>
+                <li><a href="">정기배송</a></li>
+                <li><a href="">제품구매</a></li>
+                <li><a href="">커뮤니티</a></li>
+                <li><a href="">갤러리</a></li>
+                <li><a href="">문의하기</a></li>
+              </ul>
+              <ul class="header-login" id="header-login">
+                <li id="login-button"><a href="login.html">로그인</a></li>
+                <li id="signup-button"><a href="signup.html">회원가입</a></li>
+                <li
+                  style="display: none"
+                  id="login-display"
+                  class="login-display"
+                >
                   <ul>
                     <li id="name-display">
                       <!-- 이름 출력 -->
                     </li>
                     <li id="logout">로그아웃</li>
                   </ul>
-                </a>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </header>
@@ -279,7 +283,11 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a href="#">
-                <img src="images/farmswiper/ugly1.png" alt="농작물1" class="produce-img" />
+                <img
+                  src="images/farmswiper/ugly1.png"
+                  alt="농작물1"
+                  class="produce-img"
+                />
                 <div class="recipe-overlay">
                   <img src="images/farmswiper/hoverimg1.png" alt="딸기" class="recipe-img" />
                   <!-- <p class="recipe-text">딸기 샐러드: 초록초록🥬 빨강빨강🍓 색감이 잘어울려요</p> -->
@@ -550,7 +558,12 @@
       </section>
       <!-- gallery영역 -->
       <div class="title-wrap">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <h2
+          class="title"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
           몬나니 농장은<br />
           이런 활동도 해요
         </h2>

@@ -47,27 +47,35 @@ window.addEventListener("load", function () {
     window.history.replaceState({}, "", url.toString());
   }
 
-  //    // 헤더 요소 선택
-  // const header = document.querySelector('.header');
-
-  // // 스크롤 이벤트 리스너 추가
-  // window.addEventListener('scroll', () => {
-  //   // 현재 스크롤 위치
-  //   const scrollY = window.scrollY;
-
-  //   // 헤더의 높이 (100px)
-  //   const headerHeight = header.offsetHeight;
-
-  //   // 스크롤 위치가 헤더 높이보다 크면 active 클래스 추가
-  //   if (scrollY > headerHeight) {
-  //     header.classList.add('active');
-  //   } else {
-  //     header.classList.remove('active');
-  //   }
-  // });
   function closeIcon() {
     var img = document.createElement("img");
   }
+  const headerClose = this.document.querySelector(".header-close");
+  const headerToggle = this.document.querySelector(".header-toggle");
+  headerClose.addEventListener("click", function () {
+    headerToggle.classList.toggle("active");
+  });
+
+  // header-close 요소와 img 요소 선택
+  // const headerClose = document.getElementById('header-close');
+  const menuIcon = document.getElementById("menu-icon");
+
+  // 이미지 상태 토글을 위한 초기 값 설정
+  let isMenuOpen = false; // 현재 상태를 저장하는 변수
+
+  // 클릭 이벤트 추가
+  headerClose.addEventListener("click", function () {
+    if (isMenuOpen) {
+      // 메뉴가 열려 있으면 다시 icon_menu.png로 변경
+      menuIcon.src = "images/icons/icon_menu.png";
+    } else {
+      // 메뉴가 닫혀 있으면 icon_close.png로 변경
+      menuIcon.src = "images/icons/icon_close.svg";
+    }
+
+    // 상태 토글 (true <-> false)
+    isMenuOpen = !isMenuOpen;
+  });
 });
 
 // jquery
