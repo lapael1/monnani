@@ -24,11 +24,16 @@
   font-size: 20px;
   font-weight: 700;
 }
-.gallery-inner ul > li > a > img {
+.gallery-inner ul > li > img {
   width: 90%;
   height: 90%;
   border-radius: 20px;
+  transition: all 0.3s linear;
 }
+.gallery-inner ul > li > img:hover {
+  transform: scale(1.1);
+}
+
 /* 갤러리 더보기 버튼 */
 .galbtn-wrap {
   /* width: 100%; */
