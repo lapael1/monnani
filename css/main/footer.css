@@ -237,8 +237,6 @@ span {
   }
   .cs {
     margin-bottom: 20px;
-  }
-  .cs {
     display: flex;
     font-size: 16px;
     margin-left: 10px;
@@ -246,7 +244,10 @@ span {
   }
   .cs-sns {
     padding: 5px 10px;
-    gap: 5px;
+  }
+  .cs-sns svg{
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -268,5 +269,10 @@ span {
   }
   .cs-time {
     white-space: normal;
+  }
+  .cs-sns svg{
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
   }
 }
