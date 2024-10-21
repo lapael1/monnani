@@ -28,7 +28,6 @@
   border-radius: 30px;
   right: 5.5%;
   bottom: 30.4%;
-  background-color: #ff6741;
 }
 .main-banner > p{
   position: absolute;
@@ -51,8 +50,24 @@
 .main-banner a p{
   /* position: relative; */
   display: inline;
+  margin-right: 1vw;
 }
 .main-banner a img{
-  width: 2vw;
+  width: 2.25vw;
   justify-content: end;
+}
+.main-banner list-style{
+  height: auto;
+}
+.visual1 button{
+  background-color: #ff6741;
+}
+.visual2{
+  color: white;
+}
+.visual2 button{
+  background-color: #62C975;
+}
+.visual2 p{
+  color: white;
 }
