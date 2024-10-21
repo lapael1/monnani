@@ -83,6 +83,7 @@
     font-weight: 700;
   }
 }
+
 @media screen and (max-width: 950px) {
   .gallery-inner ul > li > a > img {
     width: 90%;
@@ -239,26 +240,34 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 20px;
+  margin: 30px 20px;
 }
-
-.gellery-item {
-  width: 100%;
-  background-color: #ccc;
+.gallery-item {
+  width: 80%;
+  height: 100%;
+  /* background-color: #bc1dd1; */
   margin: 10px;
-  padding: 20px;
-  text-align: center;
+  padding: 35px;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
-.gellery-item img {
-  width: 40%;
+.gallery-item img {
+  width: 30%;
+  height: auto;
+  margin: 10px 10px;
 }
-.gellery-description {
-  background-color: blueviolet;
+.gallery-description {
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* 부모 요소가 어느 정도의 높이를 가질지 설정 */
+  padding: 39px 20px;
   width: 70%;
 }
-.gellery-description p {
-  font-size: 20px;
-  margin-bottom: 10px;
+.gallery-description p {
+  font-size: 16px;
+  text-align: center; /* 가로 가운데 정렬 (필요 시) */
+  white-space: normal;
 }
