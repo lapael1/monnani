@@ -62,8 +62,91 @@ h2.title{
 .buybtn:hover{
   background-color: #E2360A;
 }
+ /* 모달창 */
+ /* 모달 컨테이너 */
+ .modal {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed;
+  z-index: 9999; /* 가장 앞에 위치 */
+  left: 0;
+  top: 0;
+  width: 100%;
+height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* 검정 배경 투명도 */
+}
+
+/* 모달 콘텐츠 */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  background-color: white;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* 닫기 버튼 및 '오늘 하루 열지 않음' */
+.close-wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #bbb;
+  align-items: center;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.close-wrap span{
+  font-weight: normal;
+}
+.close-wrap .notToday{
+  vertical-align: middle !important;
+}
+.close-wrap input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.close-btn {
+  color: #aaa;
+  font-weight: 300;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.close-btn:hover {
+  color: #aaa;
+}
+
+
+/* 이미지 스타일 */
+.modal-content img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+input[type="checkbox"]{
+  vertical-align: middle;
+}
 
 @media screen and (max-width : 768px) {
+  .close-wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    background-color: #ffffff;
+    color: #bbb;
+    align-items: center;
+    overflow: hidden;
+    vertical-align: middle;
+  }
   h2.title{
     font-size: 30px;
     margin-top: 50px;
@@ -76,6 +159,25 @@ h2.title{
     font-size: 24px;
     padding: 8px;
   }
+  /* 모달 */
+  .modal-content {
+    width: 70%; /* 화면 너비의 80%로 조정 */
+}
+}
+@media screen and (max-width:564px){
+  input[type="checkbox"] {
+      transform: scale(0.8); /* 80% 크기로 줄이기 */
+      -webkit-transform: scale(0.8); /* 크롬 및 사파리 호환 */
+      -moz-transform: scale(0.8); /* 파이어폭스 호환 */
+      -o-transform: scale(0.8); /* 오페라 호환 */
+      -ms-transform: scale(0.8); /* IE 호환 */
+  }
+  .close-btn{
+    transform: scale(0.9);
+}
+.close-wrap .notToday{
+    font-size: 15px;
+}
 }
 @media screen and (max-width : 484px){
   h2.title{
@@ -92,6 +194,22 @@ h2.title{
   }
 }
 @media screen and (max-width : 420px){
+  .modal-content {
+    width: 80%; /* 화면 너비의 90%로 조정 */
+}
+input[type="checkbox"] {
+  transform: scale(0.95); /* 80% 크기로 줄이기 */
+  -webkit-transform: scale(0.95); /* 크롬 및 사파리 호환 */
+}
+.close-btn{
+  transform: scale(0.9);
+}
+.close-wrap .notToday{
+  font-size: 14px;
+}
+.close-wrap{
+  padding: 0px;
+}
   h2.title{
     font-size: 24px;
   }
