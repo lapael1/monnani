@@ -1,4 +1,5 @@
 @charset "utf-8";
+/* 메인페이지 갤러리 */
 .gallery {
   width: 100%;
   height: auto;
@@ -211,4 +212,53 @@
     display: block; /* a 태그를 블록 요소로 설정 */
     text-align: center; /* 텍스트 중앙 정렬 */
   }
+}
+
+/* 갤러리 상세페이지 */
+.gallery-visual {
+  position: relative;
+  text-align: center;
+}
+
+.gallery-visual img {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+}
+
+.gallery-visual h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 48px;
+}
+
+.gallery-cate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.gellery-item {
+  width: 100%;
+  background-color: #ccc;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.gellery-item img {
+  width: 40%;
+}
+.gellery-description {
+  background-color: blueviolet;
+  width: 70%;
+}
+.gellery-description p {
+  font-size: 20px;
+  margin-bottom: 10px;
 }

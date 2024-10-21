@@ -66,6 +66,7 @@ h2.title{
 @media screen and (max-width : 768px) {
   h2.title{
     font-size: 30px;
+    margin-top: 50px;
   }
   .buybtn, .galbtn{
     min-width: 260px;

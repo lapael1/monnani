@@ -20,6 +20,10 @@ window.addEventListener("load", function () {
         slidesPerView: 2.5, // 1280px 이상일 때 한 번에 3개의 슬라이드 표시
         spaceBetween: 20, // 슬라이드 간격 100px
       },
+      480: {
+        slidesPerView: 2.2, // 1280px 이상일 때 한 번에 3개의 슬라이드 표시
+        spaceBetween: 20, // 슬라이드 간격 100px
+      },
       320: {
         slidesPerView: 2.0, // 1280px 이상일 때 한 번에 3개의 슬라이드 표시
         spaceBetween: 20, // 슬라이드 간격 100px
