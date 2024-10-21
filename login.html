@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>로그인</title>
+    <link rel="stylesheet" href="css/main/main.css" />
+    <link rel="stylesheet" href="css/login/login.css" />
     <script src="js/login/login.js"></script>
   </head>
   <body>
@@ -18,6 +20,7 @@
             id="login-id"
             name="login-id"
           />
+
           <input
             type="password"
             placeholder="비밀번호"
@@ -25,12 +28,19 @@
             id="login-pw"
             name="login-pw"
           />
-          <button type="submit">로그인</button>
-          <hr />
-          <button>네이버로 로그인</button>
-          <button>카카오로 로그인</button>
+
+          <button type="submit" class="main-login">로그인</button>
+          <div class="hr"></div>
+          <button class="naver-login">
+            <img src="images/icons/icon_naver.svg" alt="naver" />네이버로 로그인
+          </button>
+
+          <button class="kakao-login">
+            <img src="images/icons/icon_kakao.svg" alt="kakao" />카카오로 로그인
+          </button>
+
           <p>아직 회원이 아니세요?</p>
-          <button>회원가입</button>
+          <button class="signup">회원가입</button>
         </form>
       </div>
     </div>
