@@ -166,7 +166,7 @@ span {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 5px;
-    white-space: no-wrap;
+    white-space: nowrap;
   }
   .cs-mb {
     display: none;
@@ -256,14 +256,17 @@ span {
     margin-left: 10px;
     font-weight: 600;
   }
-  .cs-name p{
+  .cs-name p {
     font-size: 14px;
   }
-  .cs-name span{
+  .cs-name span {
     font-size: 14px;
   }
-  .cs-copy{
+  .cs-copy {
     font-size: 14px;
+    white-space: normal;
+  }
+  .cs-time {
     white-space: normal;
   }
 }
