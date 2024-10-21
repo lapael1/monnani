@@ -85,6 +85,9 @@ h2.title {
 
 /* 모바일 화면 대응 */
 @media (max-width: 768px) {
+  .recommend{
+    margin-top: 0px
+  }
   .rec-content {
     width: 80%; /* 각 카드가 전체 너비를 차지 */
     margin-right: 0; /* 오른쪽 여백 제거 */

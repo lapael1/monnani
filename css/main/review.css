@@ -46,6 +46,7 @@
 p.review-txt{
   font-size: 32px;
 }
+
 .customer-review{
   margin-bottom: 50px;
 }
@@ -85,6 +86,12 @@ p.review-txt{
 
 @media screen and (max-width : 768px) {
   /* 기존 스타일들 */
+  .title-wrap{
+    margin-bottom: 20px;
+  }
+  h2.title{
+    margin-top: 50px;
+  }
   .review h3 {
     font-size: 26px;
     font-weight: bold;
@@ -101,19 +108,21 @@ p.review-txt{
   flex-direction: column;
     margin-bottom: 50px;
     gap: 50px;
+    padding: 0px 10px;
   }
   .customer-review-wrap{
     display: flex;
     align-items: center;
   flex-direction: column-reverse;
     gap: 50px;
+    padding: 0px 10px;
   }
   .customer-review{
     margin-bottom: 0;
 
   }
   p.review-txt{
-    font-size: 32px;
+    font-size: 26px;
   }
   /* star 요소의 크기 조정 */
   .star {
@@ -121,7 +130,7 @@ p.review-txt{
     width: 100%;
   }
   .review-txt a img{
-    max-width: 55px;
+    max-width: 45px;
     width: 100%;
     vertical-align:sub;
   }
@@ -154,14 +163,14 @@ p.review-txt{
   }
 
   p.review-txt{
-    font-size: 22px;
+    font-size: 20px;
   }
   .star {
     max-width: 120px; /* 원하는 크기로 조정 */
     width: 100%;
   }
   .review-txt a img{
-    max-width: 45px;
+    max-width: 40px;
     width: 100%;
     vertical-align:sub;
   }

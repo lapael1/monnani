@@ -161,6 +161,14 @@
   .intro-left,
   .intro2-left {
     margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .intro-right {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .intro2-right {
+    margin-bottom: 20px;
   }
   .introduction p,
   .introduction2 p {
@@ -169,6 +177,24 @@
   .introduction img,
   .introduction2 img {
     padding: 0px 10px;
+  }
+  .introduction2 {
+    margin-top: 20px;
+  }
+  .intro-right h3,
+  .intro2-left h3 {
+    margin-top: 20px;
+  }
+  .intro-right .p1,
+  .intro2-left .p4 {
+    margin-top: 20px;
+  }
+  .intro-right .p2,
+  .intro2-left .p5 {
+    margin-top: 20px;
+  }
+  .intro-right .p3 {
+    margin-top: 20px;
   }
   /* .introduction img, .introduction2 img {
     width: 80%;
