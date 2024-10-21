@@ -58,14 +58,26 @@
   <body>
     <!-- event modal -->
     <!-- 플로팅버튼 -->
+
     <!-- 탑버튼 -->
     <div class="topbtn fixBtn">
       <img src="images/topbtn1.png" alt="탑버튼" />
     </div>
     <!-- 문의하기 버튼 -->
     <button class="gotop fixBtn">
-      <img src="images/call_carrot.png" alt="클릭" />
+      <img src="images/call_carrot.png" alt="클릭" id="faqToggleBtn" />
     </button>
+
+    <!-- 문의하기 내용 -->
+    <div id="faqSection" class="faq-section">
+      <h3>문의하기 (F&Q)</h3>
+      <p>여기서 궁금한 사항을 남기세요.</p>
+      <!-- 추가 내용 -->ㄴㅀㄱㅈㅎㅈㄱㅎㅈㄱㅎ ㄱㅎㅈㅎㅈㅎ ㅈㄱㅎ ㅈㄱㅎㄱㅈㅎ
+    </div>
+
+    <!-- JavaScript -->
+    <script></script>
+
     <!-- 전체 wrap -->
     <div class="wrap">
       <!-- header -->
@@ -209,11 +221,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a href="#">
-                <img
-                  src="images/farmswiper/ugly1.png"
-                  alt="농작물1"
-                  class="produce-img"
-                />
+                <img src="images/farmswiper/ugly1.png" alt="농작물1" class="produce-img" />
                 <div class="recipe-overlay">
                   <img src="images/farmswiper/hoverimg1.png" alt="딸기" class="recipe-img" />
                   <!-- <p class="recipe-text">딸기 샐러드: 초록초록🥬 빨강빨강🍓 색감이 잘어울려요</p> -->
@@ -314,6 +322,39 @@
             <button class="buybtn">
               <a href="#">구출하러가기</a>
             </button>
+          </div>
+        </div>
+      </section>
+      <!-- farmwsiwperB 영역 -->
+      <section class="farmswiperb">
+        <div class="swiper sw-farmswiperb">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/farmswiper/prodreview.png" alt="이미지 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/farmswiper/prodreview.png" alt="이미지 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/farmswiper/prodreview.png" alt="이미지 3" />
+            </div>
+            <!-- 더 많은 슬라이드를 추가할 수 있습니다 -->
+          </div>
+        </div>
+      </section>
+      <section class="farmswiperc">
+        <div class="swiper sw-farmswiperc">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/farmswiper/prodreview.png" alt="이미지 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/farmswiper/prodreview.png" alt="이미지 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/farmswiper/prodreview.png" alt="이미지 3" />
+            </div>
+            <!-- 더 많은 슬라이드를 추가할 수 있습니다 -->
           </div>
         </div>
       </section>
@@ -452,7 +493,7 @@
       <!-- gallery영역 -->
       <div class="title-wrap">
         <h2 class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-         몬나니 농장은<br />
+          몬나니 농장은<br />
           이런 활동도 해요
         </h2>
       </div>
