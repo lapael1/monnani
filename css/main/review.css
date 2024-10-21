@@ -46,7 +46,9 @@
 p.review-txt{
   font-size: 32px;
 }
-
+.review-txt {
+  overflow: hidden;
+}
 .customer-review{
   margin-bottom: 50px;
 }
