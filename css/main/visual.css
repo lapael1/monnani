@@ -70,3 +70,8 @@
 .visual2 p {
   color: white;
 }
+@media screen and (max-width:768px){
+  .visual{
+    padding-top: 90px;
+  }
+}
