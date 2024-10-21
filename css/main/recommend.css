@@ -9,6 +9,9 @@
   display: block;
   position: relative;
 }
+.recommend-content{
+  gap: 20px;
+}
 /* 타이틀 */
 h2.title {
   position: relative;
@@ -37,16 +40,14 @@ h2.title {
 /* 내용 */
 .recommend-content {
   display: flex;
-  justify-content: space-between;
   /* flex-wrap: wrap; 기본적으로 줄 바꿈 허용 */
 }
 
 .rec-content {
   max-width: 380px;
   width: 100%;
-  background-color: #F5F5F7;
   border-radius: 10px;
-  margin-right: 5%;
+  
   margin-bottom: 20px; /* 아래 여백 추가 */
   display: flex;
   flex-direction: column;
@@ -66,20 +67,60 @@ h2.title {
   font-size: 20px;
 }
 .rec-txt{
-  padding: 15% 10%;
+  padding: 10px;
   line-height: 150%;
   font-size: 18px;
 }
-
-
+.recommendtab{
+  display: none;
+}
 
 /* 반응형 스타일 */
 /* 태블릿 및 작은 화면 대응 */
 @media (max-width: 1024px) {
-  .rec-content {
-    min-width: 300px; /* 태블릿에서 최소 너비 축소 */
-  
-    margin-right: 5%;
+ .recommend{
+  display: none;
+ }
+  .recommendtab{
+    position: relative;
+    display: block;
+  }
+  .rectabwrap{
+    display: block;
+    position: relative;
+  }
+  .rectabcon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* background-color: #F5F5F7; */
+  }
+  .rectabtxt{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .rectabwrap{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  .rectabcon{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  #rectabtitle::after {
+    content: "";
+    display: block;
+    width: 100%;              /* h2의 너비에 맞게 설정 */
+    height: 16px;
+    border-radius: 5px;
+    background-color: #62C975;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
   }
 }
 
@@ -88,12 +129,7 @@ h2.title {
   .recommend{
     margin-top: 0px
   }
-  .rec-content {
-    width: 80%; /* 각 카드가 전체 너비를 차지 */
-    margin-right: 0; /* 오른쪽 여백 제거 */
-    margin-bottom: 20px; /* 카드 사이 간격 */
-    border-radius: 10px;
-  }
+ 
   .recommend-content {
     flex-direction: column; /* 세로 정렬로 변경 */
     align-items: center; /* 중앙 정렬 */
@@ -105,9 +141,35 @@ h2.title {
 
 
 /* 작은 모바일 화면 대응 */
+@media (max-width: 600px) {
+  .rectabtxt h2{
+    font-size: 20px;
+  }
+  .rectabtxt p{
+    font-size: 15px;
+  }
+}
 @media (max-width: 480px) {
-  .rec-content {
-    width: 90%;
-    margin-right: 0;
+  .rectabtxt h2{
+    font-size: 18px;
+  }
+  .rectabtxt p{
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .rectabtxt h2{
+    font-size: 16px;
+  }
+  .rectabtxt p{
+    font-size: 13px;
+  }
+}
+@media (max-width: 320px) {
+  .rectabtxt h2{
+    font-size: 15px;
+  }
+  .rectabtxt p{
+    font-size: 12px;
   }
 }
