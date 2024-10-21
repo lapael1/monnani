@@ -221,12 +221,49 @@ span {
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .cs-copy {
     display: block;
     padding: 15px 15px;
     font-size: 16px;
     font-weight: 550;
     margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 689px) {
+  .footer-cs {
+    flex-direction: column;
+  }
+  .cs {
+    margin-bottom: 20px;
+  }
+  .cs {
+    display: flex;
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: 600;
+  }
+  .cs-sns {
+    padding: 5px 10px;
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cs p {
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 600;
+  }
+  .cs-name p{
+    font-size: 14px;
+  }
+  .cs-name span{
+    font-size: 14px;
+  }
+  .cs-copy{
+    font-size: 14px;
+    white-space: normal;
   }
 }
