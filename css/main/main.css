@@ -35,7 +35,7 @@ a {
   width: 100%;
   margin: 0 auto;
 }
-h2.title{
+h2.title {
   line-height: 130%;
 }
 /* 구출하기 버튼 */
@@ -59,214 +59,257 @@ h2.title{
   display: block; /* a 태그를 블록 요소로 설정 */
   text-align: center; /* 텍스트 중앙 정렬 */
 }
-.buybtn:hover{
-  background-color: #E2360A;
+.buybtn:hover {
+  background-color: #e2360a;
 }
- /* 모달창 */
- /* 모달 컨테이너 */
- .modal {
-  display: none; /* 기본적으로 숨김 */
+/* 모달창 */
+/* 모달 컨테이너 */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  z-index: 9999; /* 가장 앞에 위치 */
+  z-index: 9999;
   left: 0;
   top: 0;
   width: 100%;
-height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* 검정 배경 투명도 */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* 모달 콘텐츠 */
+.modal-wrapper {
+  width: 500px; /* 모달 팝업의 전체 크기 */
+  height: auto;
+  position: relative;
+}
+
 .modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% , -50%);
   background-color: white;
-  padding: 0;
+  position: relative;
   border-radius: 20px;
   overflow: hidden;
 }
 
-/* 닫기 버튼 및 '오늘 하루 열지 않음' */
-.close-wrap {
-  position: relative;
+.sw-modal {
+  width: 100%;
+  height: auto;
+}
+
+.sw-modal .swiper-slide {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sw-modal img {
+  width: 100%;
+  display: block;
+}
+
+
+/* 고정된 close-wrap */
+.close-wrap {
+  display: flex;
+  padding-left: 8px;
+  padding-right: 8px;
+  align-items: center;
   justify-content: space-between;
-  padding: 10px;
   background-color: #ffffff;
   color: #bbb;
-  align-items: center;
-  overflow: hidden;
-  vertical-align: middle;
-}
-.close-wrap span{
-  font-weight: normal;
-}
-.close-wrap .notToday{
-  vertical-align: middle !important;
-}
-.close-wrap input[type="checkbox"] {
-  width: 17px;
-  height: 17px;
-  margin-right: 5px;
-  margin-left: 5px;
+  position: relative; /* 고정 상태 */
+  z-index: 11; /* 이미지 위에 표시되도록 z-index를 높게 설정 */
 }
 
 .close-btn {
-  color: #aaa;
-  font-weight: 300;
   font-size: 30px;
   cursor: pointer;
-  margin-right: 5px;
 }
 
 .close-btn:hover {
-  color: #aaa;
+  color: #333;
+}
+input#notToday{
+  width: 20px;
+  height: 20px;
+  vertical-align: middle
 }
 
+/* 페이지네이션 */
 
-/* 이미지 스타일 */
-.modal-content img {
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-input[type="checkbox"]{
-  vertical-align: middle;
-}
-
-@media screen and (max-width : 768px) {
+@media screen and (max-width: 768px) {
+  .modal-content{
+    margin: auto;
+  }
   .close-wrap {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 0px;
+    padding: 3px 8px 3px 8px;
     background-color: #ffffff;
     color: #bbb;
     align-items: center;
     overflow: hidden;
     vertical-align: middle;
   }
-  h2.title{
+  .close-btn {
+    font-size: 25px;
+    cursor: pointer;
+  }
+ 
+  input#notToday{
+    width: 18px;
+    height: 18px;
+    vertical-align: middle
+  }
+  .close-wrap .notToday{
+    font-size: 18px;
+  }
+  h2.title {
     font-size: 30px;
     margin-top: 50px;
   }
-  .buybtn, .galbtn{
+  .buybtn,
+  .galbtn {
     min-width: 260px;
-    min-height: 40px
-}
-  .buybtn a, .galbtn a{
+    min-height: 40px;
+  }
+  .buybtn a,
+  .galbtn a {
     font-size: 24px;
     padding: 8px;
   }
   /* 모달 */
   .modal-content {
     width: 70%; /* 화면 너비의 80%로 조정 */
-}
-}
-@media screen and (max-width:564px){
-  input[type="checkbox"] {
-      transform: scale(0.8); /* 80% 크기로 줄이기 */
-      -webkit-transform: scale(0.8); /* 크롬 및 사파리 호환 */
-      -moz-transform: scale(0.8); /* 파이어폭스 호환 */
-      -o-transform: scale(0.8); /* 오페라 호환 */
-      -ms-transform: scale(0.8); /* IE 호환 */
   }
-  .close-btn{
+}
+@media screen and (max-width: 564px) {
+  input[type="checkbox"] {
+    transform: scale(0.8); /* 80% 크기로 줄이기 */
+    -webkit-transform: scale(0.8); /* 크롬 및 사파리 호환 */
+    -moz-transform: scale(0.8); /* 파이어폭스 호환 */
+    -o-transform: scale(0.8); /* 오페라 호환 */
+    -ms-transform: scale(0.8); /* IE 호환 */
+  }
+  .close-btn {
     transform: scale(0.9);
-}
-.close-wrap .notToday{
+  }
+  .close-wrap .notToday {
     font-size: 15px;
+  }
 }
-}
-@media screen and (max-width : 484px){
-  h2.title{
+@media screen and (max-width: 484px) {
+  h2.title {
     font-size: 26px;
   }
-  .buybtn, .galbtn{
+  .buybtn,
+  .galbtn {
     min-width: 230px;
     min-height: 30px;
     margin-top: 7%;
-}
-  .buybtn a, .galbtn a{
+  }
+  .buybtn a,
+  .galbtn a {
     font-size: 20px;
     padding: 7px;
   }
 }
-@media screen and (max-width : 420px){
+@media screen and (max-width: 420px) {
   .modal-content {
-    width: 80%; /* 화면 너비의 90%로 조정 */
-}
-input[type="checkbox"] {
-  transform: scale(0.95); /* 80% 크기로 줄이기 */
-  -webkit-transform: scale(0.95); /* 크롬 및 사파리 호환 */
-}
-.close-btn{
-  transform: scale(0.9);
-}
-.close-wrap .notToday{
-  font-size: 14px;
-}
-.close-wrap{
-  padding: 0px;
-}
-  h2.title{
+    width: 70%; /* 화면 너비의 90%로 조정 */
+  }
+  input[type="checkbox"] {
+    transform: scale(0.95); /* 80% 크기로 줄이기 */
+    -webkit-transform: scale(0.95); /* 크롬 및 사파리 호환 */
+  }
+  .close-btn {
+    transform: scale(0.9);
+  }
+  .close-wrap .notToday {
+    font-size: 15px;
+  }
+  .close-wrap {
+    padding: 2px 6px 2px 6px;
+  }
+  h2.title {
     font-size: 24px;
   }
-  .buybtn, .galbtn{
+  .buybtn,
+  .galbtn {
     min-width: 200px;
     min-height: 30px;
     margin-top: 7%;
-
-}
-  .buybtn a, .galbtn a{
+  }
+  .buybtn a,
+  .galbtn a {
     font-size: 18px;
     padding: 6px;
   }
 }
-@media screen and (max-width : 390px){
-  h2.title{
+@media screen and (max-width: 390px) {
+  h2.title {
     font-size: 22px;
   }
-  .buybtn, .galbtn{
+  .buybtn,
+  .galbtn {
     min-width: 180px;
     min-height: 30px;
     margin-top: 6%;
-
-}
-  .buybtn a, .galbtn a{
+  }
+  .buybtn a,
+  .galbtn a {
     font-size: 17px;
     padding: 6px;
   }
 }
 
-@media screen and (max-width : 355px){
-  h2.title{
+@media screen and (max-width: 355px) {
+  h2.title {
     font-size: 19px;
   }
-  .buybtn, .galbtn{
+  .buybtn,
+  .galbtn {
     min-width: 175px;
     min-height: 28px;
     margin-top: 5%;
-
-}
-  .buybtn a, .galbtn a{
+  }
+  .buybtn a,
+  .galbtn a {
     font-size: 16px;
     padding: 6px;
   }
 }
-@media screen and (max-width : 320px){
-  h2.title{
+@media screen and (max-width: 320px) {
+  h2.title {
     font-size: 18px;
   }
-  .buybtn, .galbtn{
+  .buybtn,
+  .galbtn {
     min-width: 172px;
     min-height: 25px;
     margin-top: 5%;
-
-}
-  .buybtn a, .galbtn a{
+  }
+  .buybtn a,
+  .galbtn a {
     font-size: 15px;
     padding: 5px;
   }
+  .modal-content{
+    width: 50%;
+    margin: auto;
+  }
+  .close-wrap{
+    padding: 2px 5px 2px 5px;
+  }
+  .close-btn{
+    margin: 0;
+  }
+  .notToday{
+    margin: 0;
+  }
+  input#notToday{
+    width: 13px;
+    height: 13px;
+  }
+  
 }

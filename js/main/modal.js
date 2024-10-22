@@ -1,3 +1,21 @@
+window.addEventListener("load", function () {
+  // 스와이퍼 초기화
+  const swModal = new Swiper(".sw-modal", {
+    slidesPerView: 1, // 한 번에 하나의 슬라이드만 보여줌
+    loop: true,
+   
+    navigation: {
+      nextEl: '.swiper-button-next', // 다음 슬라이드 버튼
+      prevEl: '.swiper-button-prev', // 이전 슬라이드 버튼
+    },
+  });
+
+  // 닫기 버튼 기능 추가
+  const closeButton = document.querySelector(".close-btn");
+  closeButton.addEventListener("click", function () {
+    document.getElementById("myModal").style.display = "none";
+  });
+});
 $(document).ready(function () {
   var modal = $("#myModal");
   var closeButton = $(".close-btn");
