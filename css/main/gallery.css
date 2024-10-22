@@ -81,13 +81,16 @@
 }
 
 /* 갤러리 상세페이지 */
+.gallery-wrap {
+  width: 100%;
+  height: auto;
+}
 .gallery-visual {
   position: relative;
   text-align: center;
 }
 .gallery-visual img {
   width: 100%;
-  height: auto;
   opacity: 0.5;
 }
 .gallery-visual h1 {
@@ -99,56 +102,59 @@
   font-size: 48px;
 }
 
-.gallery-cate {
+/* 갤러리 상세페이지 */
+.gallery-cate{
+  padding-top: 10px;
+}
+.gallery-wh {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 30px 20px;
-}
-.gallery-item {
-  width: 100%;
-  height: 142px;
-  /* background-color: #bc1dd1; */
-  margin: 10px;
-  /* padding: 35px; */
-  display: flex;
-  /* justify-content: space-evenly; */
-  /* align-items: center; */
-  gap: 20px;
-}
-.gallery-item-img {
-  width: 30%;
-  height: 100%;
-  background-color: #957010;
-  overflow: hidden;
-  position: relative;
-}
-.gallery-item img {
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.gallery-description {
-  background-color: #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%; /* 부모 요소가 어느 정도의 높이를 가질지 설정 */
-  padding: 39px 20px;
-  width: 70%;
-  gap: 10px;
-}
-.gallery-description p {
-  font-size: 15px;
-  font-weight: 500;
-  text-align: center; /* 가로 가운데 정렬 (필요 시) */
-  white-space: normal;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-evenly;
+  /* width: 100%; */
+  margin-right: 20px;
+  margin-bottom: 50px;
 }
 
-/* 갤러리 탭버튼(이미지 변경) */
+.gallery-wh li {
+  flex-basis: calc(33% - 10px); /* 각 아이템이 33.33% 너비를 차지하게 설정 */
+  /* margin-bottom: 20px 10px; 
+  하단 여백 설정 */
+}
+
+.gallery-item {
+  /* border: 1px solid #ddd; */
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+.gallery-item-img {
+  width: 100%;
+  height: auto;
+  background-color: blueviolet;
+  /* overflow: hidden; */
+}
+
+.gallery-description {
+  margin-top: 10px;
+}
+.gallery-description p {
+  font-weight: 600;
+  text-align: center;
+}
+.gallery-item-img > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+}
+.gallery-item-img > img:hover {
+  transform: scale(1.1);
+}
 
 /* 반응형 */
 @media screen and (max-width: 1200px) {
