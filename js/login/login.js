@@ -29,4 +29,21 @@ window.addEventListener("load", function () {
       e.preventDefault(); // 기본 제출 동작 방지
       window.location.href = "signup.html"; // 회원가입 페이지로 이동
     });
+  // 네이버 로그인 버튼 클릭 시 외부 링크 이동
+  document
+    .querySelector(".naver-login")
+    .addEventListener("click", function (e) {
+      e.preventDefault(); // 기본 동작 방지
+      window.location.href =
+        "https://nid.naver.com/oauth2.0/authorize?client_id=YOUR_CLIENT_ID&response_type=code&redirect_uri=YOUR_REDIRECT_URI&state=YOUR_STATE";
+    });
+
+  // 카카오 로그인 버튼 클릭 시 외부 링크 이동
+  document
+    .querySelector(".kakao-login")
+    .addEventListener("click", function (e) {
+      e.preventDefault(); // 기본 동작 방지
+      window.location.href =
+        "https://kauth.kakao.com/oauth/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code";
+    });
 });
