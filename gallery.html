@@ -10,6 +10,10 @@
     <link rel="manifest" href="images/favicon//site.webmanifest" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- css 연결 -->
     <link rel="stylesheet" href="css/main/main.css" />
     <link rel="stylesheet" href="css/main/footer.css" />
@@ -57,9 +61,14 @@
             <img src="images/gallery/갤러리배너.png" alt="갤러리 배너" />
             <h1>갤러리</h1>
           </section>
+
           <section class="gallery-cate">
-            <div class="gallery-item">
-              <img src="images/gallery/농촌체험1.jpg" alt="농촌체험" />
+            <div class="gallery-item" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <!-- 이미지 -->
+              <div class="gallery-item-img">
+                <img src="images/gallery/농촌체험1.jpg" alt="농촌체험" />
+              </div>
+              <!-- 텍스트 -->
               <div class="gallery-description">
                 <p>
                   몬나니농장을 가입해 주신 회원분들과 함께, 농촌체험을 진행했습니다. <br />
@@ -68,7 +77,7 @@
                 </p>
               </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
               <div class="gallery-description">
                 <p>
                   평소 봉사활동은 하는 곳에서 행사가 있어 참여했어요! <br />
@@ -76,10 +85,14 @@
                   그래서 지원자를 받아 봉사자분들과 함께 피해 입으신 농가에 가서, 일손을 도와드렸습니다.
                 </p>
               </div>
-              <img src="images/gallery/봉사활동1.jpg" alt="봉사활동" />
+              <div class="gallery-item-img">
+                <img src="images/gallery/봉사활동1.jpg" alt="봉사활동" />
+              </div>
             </div>
-            <div class="gallery-item">
-              <img src="images/gallery/농업인의날.png" alt="농업인의 날" />
+            <div class="gallery-item" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <div class="gallery-item-img">
+                <img src="images/gallery/농업인의날.png" alt="농업인의 날" />
+              </div>
               <div class="gallery-description">
                 <p>
                   11월 11일은 농업인의 날 기념 행사가 있었습니다. <br />
@@ -90,7 +103,7 @@
                 </p>
               </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
               <div class="gallery-description">
                 <p>
                   올해 10회를 맞은 "자랑스런 농식품기업상"은 농업기업의 육성과<br />
@@ -99,7 +112,20 @@
                   수상 하신 분들 축하드립니다!
                 </p>
               </div>
-              <img src="images/gallery/자랑스런농식품기업상.jpg" alt="상" />
+              <div class="gallery-item-img">
+                <img src="images/gallery/자랑스런농식품기업상.jpg" alt="상" />
+              </div>
+            </div>
+            <div class="gallery-item" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <div class="gallery-item-img">
+                <img src="images/gallery/숨은보물마켓.jpg" alt="숨은보물마켓" />
+              </div>
+              <div class="gallery-description">
+                <p>
+                  중구청에서 개최한 2022년 자원순환의 날을 맞아 숨은보물마켓 행사에 참여했습니다. <br />
+                  어린이 중고장터부터 농산물과 먹거리를 무포장 판매까지 몬나니농장도도 함께 했습니다!
+                </p>
+              </div>
             </div>
           </section>
         </div>
@@ -197,4 +223,7 @@
       </div>
     </div>
   </body>
+  <script>
+    AOS.init();
+  </script>
 </html>

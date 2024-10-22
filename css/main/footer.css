@@ -94,6 +94,9 @@ span {
   margin-left: 10px;
   gap: 35px;
 }
+.cs-time-br {
+  display: none;
+}
 
 /* 반응형 */
 @media screen and (max-width: 1090px) {
@@ -245,7 +248,7 @@ span {
   .cs-sns {
     padding: 5px 10px;
   }
-  .cs-sns svg{
+  .cs-sns svg {
     width: 40px;
     height: 40px;
   }
@@ -253,7 +256,7 @@ span {
 
 @media screen and (max-width: 480px) {
   .cs p {
-    font-size: 14px;
+    font-size: 13px;
     margin-left: 10px;
     font-weight: 600;
   }
@@ -267,10 +270,7 @@ span {
     font-size: 14px;
     white-space: normal;
   }
-  .cs-time {
-    white-space: normal;
-  }
-  .cs-sns svg{
+  .cs-sns svg {
     width: 35px;
     height: 35px;
     margin-left: 5px;
