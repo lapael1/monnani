@@ -86,7 +86,10 @@
   color: #ff6741;
   cursor: pointer;
 }
-
+#cart-menu{
+  height: 23px;
+  aspect-ratio: 1/1;
+}
 @media screen and (max-width: 1024px) {
   .header-logo {
     display: block;

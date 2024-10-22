@@ -96,3 +96,8 @@ p{
     padding-top: 90px;
   }
 }
+@media screen and (max-width:480px) {
+  #login-form{
+    padding-top: 70px;
+  }
+}
