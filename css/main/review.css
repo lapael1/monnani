@@ -1,38 +1,39 @@
 @charset "utf-8";
-.review{
+.review {
   position: relative;
   display: block;
 }
-.review .title{
+.review .title {
   margin-top: 50px;
   line-height: 130%;
 }
-.review h3{
+.review h3 {
   font-size: 30px;
   font-weight: bold;
 }
-.review p{
+.review p {
   font-size: 26px;
 }
-.reviewimgs{
+.reviewimgs {
   max-width: 440px;
   width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.star{
+.star {
   max-width: 187px;
   /* max-height: 47px;
   height: 100%; */
   width: 100%;
 }
-.product-review-wrap, .customer-review-wrap{
+.product-review-wrap,
+.customer-review-wrap {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 50px;
 }
-.reviews{
+.reviews {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* 그림자 적용 */
   /* padding: 20px; */
   max-width: 480px;
@@ -43,13 +44,13 @@
 /* .reviews li{
   width: 100%;
 } */
-p.review-txt{
+p.review-txt {
   font-size: 32px;
 }
 .review-txt {
   overflow: hidden;
 }
-.customer-review{
+.customer-review {
   margin-bottom: 50px;
 }
 /* 기본 상태의 이미지 */
@@ -62,7 +63,7 @@ p.review-txt{
 .review-txt a:hover img {
   filter: brightness(0.8); /* 밝기를 70%로 줄여 색을 더 짙게 표현 */
 }
-@media screen and (max-width : 860px) {
+@media screen and (max-width: 860px) {
   /* 기존 스타일들 */
   .review h3 {
     font-size: 28px;
@@ -74,11 +75,11 @@ p.review-txt{
   p.review-txt {
     font-size: 24px;
   }
-  .review-txt a img{
+  .review-txt a img {
     max-width: 50px;
     width: 100%;
   }
-  
+
   /* star 요소의 크기 조정 */
   .star {
     max-width: 150px; /* 원하는 크기로 조정 */
@@ -86,12 +87,12 @@ p.review-txt{
   }
 }
 
-@media screen and (max-width : 768px) {
+@media screen and (max-width: 768px) {
   /* 기존 스타일들 */
-  .title-wrap{
+  .title-wrap {
     margin-bottom: 20px;
   }
-  h2.title{
+  h2.title {
     margin-top: 50px;
   }
   .review h3 {
@@ -104,26 +105,25 @@ p.review-txt{
   .reviews {
     padding: 20px 20px 50px;
   }
-  .product-review-wrap{
+  .product-review-wrap {
     display: flex;
     align-items: center;
-  flex-direction: column;
+    flex-direction: column;
     margin-bottom: 50px;
     gap: 50px;
     padding: 0px 10px;
   }
-  .customer-review-wrap{
+  .customer-review-wrap {
     display: flex;
     align-items: center;
-  flex-direction: column-reverse;
+    flex-direction: column-reverse;
     gap: 50px;
     padding: 0px 10px;
   }
-  .customer-review{
+  .customer-review {
     margin-bottom: 0;
-
   }
-  p.review-txt{
+  p.review-txt {
     font-size: 26px;
   }
   /* star 요소의 크기 조정 */
@@ -131,14 +131,14 @@ p.review-txt{
     max-width: 120px; /* 원하는 크기로 조정 */
     width: 100%;
   }
-  .review-txt a img{
+  .review-txt a img {
     max-width: 45px;
     width: 100%;
-    vertical-align:sub;
+    vertical-align: sub;
   }
 }
 
-@media screen and (max-width : 484px){
+@media screen and (max-width: 484px) {
   .reviews {
     padding: 15px 15px 25px;
   }
@@ -149,36 +149,36 @@ p.review-txt{
   .review p {
     font-size: 17px;
   }
-  
-  .product-review-wrap{
+
+  .product-review-wrap {
     display: flex;
     align-items: center;
-  flex-direction: column;
+    flex-direction: column;
     margin-bottom: 50px;
     gap: 40px;
   }
-  .customer-review-wrap{
+  .customer-review-wrap {
     display: flex;
     align-items: center;
-  flex-direction: column-reverse;
+    flex-direction: column-reverse;
     gap: 40px;
   }
 
-  p.review-txt{
+  p.review-txt {
     font-size: 20px;
   }
   .star {
     max-width: 120px; /* 원하는 크기로 조정 */
     width: 100%;
   }
-  .review-txt a img{
+  .review-txt a img {
     max-width: 40px;
     width: 100%;
-    vertical-align:sub;
+    vertical-align: sub;
   }
 }
 
-@media screen and (max-width : 320px){
+@media screen and (max-width: 320px) {
   .reviews {
     padding: 10px 10px 20px;
   }
@@ -189,31 +189,108 @@ p.review-txt{
   .review p {
     font-size: 15px;
   }
-  
-  .product-review-wrap{
+
+  .product-review-wrap {
     display: flex;
     align-items: center;
-  flex-direction: column;
+    flex-direction: column;
     margin-bottom: 50px;
     gap: 40px;
   }
-  .customer-review-wrap{
+  .customer-review-wrap {
     display: flex;
     align-items: center;
-  flex-direction: column-reverse;
+    flex-direction: column-reverse;
     gap: 40px;
   }
 
-  p.review-txt{
+  p.review-txt {
     font-size: 20px;
   }
   .star {
     max-width: 100px; /* 원하는 크기로 조정 */
     width: 100%;
   }
-  .review-txt a img{
+  .review-txt a img {
     max-width: 35px;
     width: 100%;
-    vertical-align:sub;
+    vertical-align: sub;
   }
+}
+/* 스와이퍼 컨테이너 크기 및 overflow 설정 */
+.farmswiperb,
+.farmswiperc {
+  position: relative;
+  width: 100%; /* 부모 컨테이너는 전체 너비 사용 */
+  overflow: hidden; /* 양 끝 부분 숨기기 */
+  margin: 0 auto; /* 가운데 정렬 */
+}
+
+/* 스와이퍼 자체 스타일 */
+.farmswiperb .swiper,
+.farmswiperc .swiper {
+  width: 100%; /* 전체 너비로 확장 */
+  height: 300px; /* 높이 설정, 필요에 따라 변경 */
+}
+
+/* 스와이퍼 슬라이드 */
+.farmswiperb .swiper-slide,
+.farmswiperc .swiper-slide {
+  display: flex;
+  justify-content: center; /* 이미지가 슬라이드 중앙에 위치하도록 설정 */
+  align-items: center;
+  width: 150%; /* 슬라이드가 이미지 크기에 맞게 조정 */
+  flex-shrink: 0; /* 슬라이드가 줄어들지 않도록 설정 */
+}
+
+/* 이미지 크기 조정 */
+.farmswiperb .swiper-slide img,
+.farmswiperc .swiper-slide img {
+  width: 100%; /* 슬라이드 내부에서 이미지가 가득 차도록 */
+  height: auto; /* 이미지 비율을 유지하며 높이 조정 */
+  object-fit: cover; /* 이미지가 슬라이드에 꽉 차도록 */
+}
+
+/* 반응형 텍스트 */
+#prorev,
+#cusrev {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* 스와이퍼 컨테이너 크기 및 overflow 설정 */
+.farmswiperb,
+.farmswiperc {
+  position: relative;
+  width: 100%; /* 부모 컨테이너는 전체 너비 사용 */
+  overflow: hidden; /* 양 끝 부분 숨기기 */
+  margin: 0 auto; /* 가운데 정렬 */
+}
+
+/* 스와이퍼 자체 스타일 */
+.farmswiperb .swiper,
+.farmswiperc .swiper {
+  width: 100%; /* 전체 너비로 확장 */
+  height: auto; /* 높이 설정, 필요에 따라 변경 가능 */
+}
+
+/* 스와이퍼 슬라이드 */
+.farmswiperb .swiper-slide,
+.farmswiperc .swiper-slide {
+  display: flex;
+  justify-content: center; /* 이미지가 슬라이드 중앙에 위치하도록 설정 */
+  align-items: center;
+  width: auto; /* 슬라이드 크기는 이미지 크기에 맞춰 자동 조정 */
+  flex-shrink: 0; /* 슬라이드가 줄어들지 않도록 설정 */
+}
+
+/* 이미지 크기 조정 */
+.farmswiperb .swiper-slide img,
+.farmswiperc .swiper-slide img {
+  width: 70%; /* 슬라이드 내부에서 이미지가 가득 차도록 */
+  height: auto; /* 이미지 비율을 유지하며 높이 조정 */
+  object-fit: cover; /* 이미지가 슬라이드에 꽉 차도록 */
+}
+.farmswiperb {
+  margin-top: 5%;
 }
