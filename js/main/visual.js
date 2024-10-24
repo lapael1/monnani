@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
     let visual2 = document.getElementById("visual2");
 
     if (screenWidth <= 1024) {
-      visual1.setAttribute("src", "images/visual1-mobile.png");
+      visual1.setAttribute("src", "images/visual1-mobile1.png");
       visual2.setAttribute("src", "images/visual2-mobile.png");
     } else {
       visual1.setAttribute("src", "images/visual1.png");
