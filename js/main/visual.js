@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
 
     // 화면이 1024px 이하일 때 모바일 이미지로 교체
     if (screenWidth <= 1024) {
-      visual1.setAttribute("src", "images/visual1-mobile.png");
+      visual1.setAttribute("src", "images/visual1-mobile1.png");
       visual2.setAttribute("src", "images/visual2-mobile.png");
     } else {
       // 1024px 이상일 때 원래 이미지로 복구
