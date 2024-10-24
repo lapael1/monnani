@@ -23,10 +23,12 @@
   flex-wrap: wrap;
   /* text-align: center; */
   gap: 10px;
+  min-width: 280px;
 }
 .gallery-inner ul li {
   width: calc(100% / 4 - 10px);
   /* background-color: blueviolet; */
+  
 }
 .gallery-inner p {
   text-align: center;
@@ -103,42 +105,44 @@
 }
 
 /* 갤러리 상세페이지 */
-.gallery-cate{
-  padding-top: 10px;
+.gallery-cate {
+  width: 100%;
 }
 .gallery-wh {
+  list-style: none;
+  /* padding-left:30px; */
+  /* margin: 10px 10px; */
+  /* margin: 10px; */
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  justify-content: space-evenly;
-  /* width: 100%; */
-  margin-right: 20px;
-  margin-bottom: 50px;
+  /* justify-content: start; */
+  gap: 20px;
+  /* background-color: aqua; */
+  width: 100%;
 }
 
 .gallery-wh li {
-  flex-basis: calc(33% - 10px); /* 각 아이템이 33.33% 너비를 차지하게 설정 */
-  /* margin-bottom: 20px 10px; 
-  하단 여백 설정 */
+  width: calc(100% / 3 - 14px);
 }
 
 .gallery-item {
   /* border: 1px solid #ddd; */
-  padding: 10px;
+  /* padding: 10px; */
+  /* display: inline; */
   box-sizing: border-box;
   text-align: center;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* min-width: 280px; */
 }
 .gallery-item-img {
   width: 100%;
-  height: auto;
-  background-color: blueviolet;
-  /* overflow: hidden; */
-}
+  height: 260px;
 
+  overflow: hidden;
+  object-fit: cover;
+}
 .gallery-description {
   margin-top: 10px;
 }
@@ -157,6 +161,15 @@
 }
 
 /* 반응형 */
+@media screen and (max-width: 1300px) {
+  .gallery-item-img {
+    height: 20vw;
+  }
+  .gallery-wh {
+    width: 90%;
+    margin: 50px auto;
+  }
+}
 @media screen and (max-width: 1200px) {
   .gallery h2 {
     text-align: center;
@@ -232,7 +245,17 @@
     width: calc(100% / 2 - 30px);
     /* background-color: blueviolet; */
   }
+  .gallery-wh {
+    width: 80%;
+  }
+  .gallery-wh li {
+    width: calc(100% / 2 - 11px);
+  }
+  .gallery-item-img {
+    height: 30vw;
+  }
 }
+
 @media screen and (max-width: 689px) {
   .gallery-inner ul {
     width: 70%;
@@ -280,5 +303,19 @@
     padding: 10px;
     display: block; /* a 태그를 블록 요소로 설정 */
     text-align: center; /* 텍스트 중앙 정렬 */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .gallery-wh {
+    width: 70%;
+    min-width: 230px;
+    min-height: 250px;
+  }
+  .gallery-wh li {
+    width: calc(100% / 1);
+  }
+  .gallery-item-img {
+    height: 50vw;
   }
 }
