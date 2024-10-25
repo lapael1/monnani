@@ -1,9 +1,11 @@
 @charset "utf-8";
 /* 메인페이지 갤러리 */
+
 .gallery {
   width: 100%;
   height: auto;
   background-color: #fff9ea;
+  margin: 10px;
 }
 .gallery h2 {
   text-align: center;
@@ -28,7 +30,6 @@
 .gallery-inner ul li {
   width: calc(100% / 4 - 10px);
   /* background-color: blueviolet; */
-  
 }
 .gallery-inner p {
   text-align: center;
@@ -39,15 +40,18 @@
   width: 100%;
   /* background-color: rgb(226, 43, 174); */
   overflow: hidden;
+  border-radius: 10px;
 }
 .img-wrap > img {
   display: block;
   width: 100%;
   height: 100%;
   transition: all 0.3s linear;
+  /* border-radius: 10px; */
 }
 .img-wrap > img:hover {
   transform: scale(1.1);
+  /* border-radius: 10px; */
 }
 
 /* 갤러리 더보기 버튼 */
@@ -159,6 +163,51 @@
 .gallery-item-img > img:hover {
   transform: scale(1.1);
 }
+/* 갤러리 상세게시판  */
+.gallery-into {
+  padding-top: 100px;
+}
+.gallery-into p {
+  font-family: "IBMPlexSansKR-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bbsSubject,
+.bbsBody {
+  width: 100%;
+  box-sizing: border-box;
+}
+.bbsSubject h3,
+.bbsSubject p {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.bbsSubject h3 {
+  font-size: 16px;
+  color: #222;
+}
+.bbsSubject p {
+  font-size: 14px;
+  color: #888;
+}
+.bbsBody {
+  padding: 40px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.bbsBtn ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.bbsBtn ul li {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
 
 /* 반응형 */
 @media screen and (max-width: 1300px) {
@@ -267,7 +316,7 @@
     margin: 10px;
   }
   .gallery-inner p {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     text-align: center;
     padding: 10px 10px;
@@ -305,6 +354,23 @@
     text-align: center; /* 텍스트 중앙 정렬 */
   }
 }
+@media screen and (max-width: 600px) {
+  .gallery-wh {
+    width: 70%;
+    min-width: 230px;
+    min-height: 250px;
+  }
+  .gallery-wh li {
+    width: calc(100% / 1);
+  }
+  .gallery-inner ul {
+    width: 90%;
+    margin: auto;
+  }
+  .gallery-item-img {
+    height: 50vw;
+  }
+}
 
 @media screen and (max-width: 500px) {
   .gallery-wh {
@@ -314,6 +380,10 @@
   }
   .gallery-wh li {
     width: calc(100% / 1);
+  }
+  .gallery-inner ul {
+    width: 90%;
+    margin: auto;
   }
   .gallery-item-img {
     height: 50vw;
