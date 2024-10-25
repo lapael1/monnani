@@ -1,7 +1,10 @@
 @charset "utf-8";
 
 p.review-txt {
-  font-size: 32px;
+  font-size: 26px;
+}
+.review-txt a img{
+  width: 50px;
 }
 .review-txt {
   overflow: hidden;
@@ -14,57 +17,120 @@ p.review-txt {
 .review-txt a:hover img {
   filter: brightness(0.8); /* 밝기를 70%로 줄여 색을 더 짙게 표현 */
 }
-/* farmswiperb와 farmswiperc 공통 스타일 */
-.farmswiperb,
-.farmswiperc {
+.review .title{
+  margin-top: 50px;
+}
+
+/* 슬라이더 컨테이너 스타일 */
+.infinite-slider, .infinite-slider2 {
+  width: 100%; /* 화면 전체 너비 */
+  overflow: hidden; /* 넘치는 부분 숨기기 */
   position: relative;
-  width: 100%; /* 부모 컨테이너는 전체 너비 사용 */
-  overflow: hidden; /* 슬라이드가 화면 밖으로 넘치지 않게 설정 */
-  margin: 0 auto; /* 가운데 정렬 */
-}
-
-.farmswiperb .swiper-slide,
-.farmswiperc .swiper-slide {
+  white-space: nowrap;
+  height: auto; /* 고정 높이 설정 (원하는 높이로 조절 가능) */
   display: flex;
-  justify-content: center; /* 이미지가 슬라이드 중앙에 위치 */
-  align-items: center; /* 이미지가 세로 중앙에 위치 */
-  flex-shrink: 0; /* 슬라이드 크기가 줄어들지 않도록 설정 */
-  width: 100%; /* 슬라이드 너비를 100%로 설정 */
+  justify-content: center;
+  align-items: center;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0)); /* 양옆을 희미하게 하는 마스크 효과 */
+  mask-size: cover;
 }
 
-.farmswiperb .swiper-slide img,
-.farmswiperc .swiper-slide img {
-  width: 100%; /* 기본 너비: 슬라이드의 100% */
-  height: auto; /* 이미지 비율 유지 */
-  object-fit: cover; /* 이미지가 슬라이드에 꽉 차도록 설정 */
+
+/* 슬라이더 이미지 스타일 */
+.infinite-slider2 img{
+  width: 150%;
+  height: 100%; /* 컨테이너의 높이에 맞추어 이미지 크기 유지 */
+  object-fit: cover; /* 이미지가 컨테이너에 꽉 차도록 설정 */
+  animation: slideLeft infinite 60s linear; /* 무한 루프 애니메이션 */
+  margin-right: 10px;
 }
+.infinite-slider img {
+  width: 150%;
+  height: 100%; 
+  object-fit: cover; /* 이미지가 컨테이너에 꽉 차도록 설정 */
+  animation: slideRight infinite 60s linear; /* 무한 루프 애니메이션 */
+  margin-right: 10px;
+}
+
+/* 왼쪽으로 이동하는 애니메이션 정의 */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0); /* 처음 위치 */
+  }
+  100% {
+    transform: translateX(-100%); /* 왼쪽으로 이동하여 화면 밖으로 사라짐 */
+  }
+}
+
+/* 오른쪽으로 이동하는 애니메이션 정의 */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%); /* 오른쪽에서 시작 */
+  }
+  100% {
+    transform: translateX(0); /* 오른쪽으로 이동하여 화면 안으로 들어옴 */
+  }
+}
+
+
+
+
 
 /* 반응형으로 화면이 작아질수록 이미지 크기를 크게 설정 */
 
 /* 작은 화면 (예: 태블릿) */
+@media screen and (max-width: 1200px) {
+  .infinite-slider img, .infinite-slider2 img{
+    width: 200%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
-  .farmswiperb .swiper-slide img,
-  .farmswiperc .swiper-slide img {
-    width: 120%; /* 1024px 이하에서는 이미지 크기를 120%로 설정 */
+  .infinite-slider img, .infinite-slider2 img{
+    width: 280%;
+  }
+  .review-txt a img{
+    width: 45px;
   }
 }
 
 /* 더 작은 화면 (예: 모바일) */
 @media screen and (max-width: 768px) {
-  .farmswiperb .swiper-slide img,
-  .farmswiperc .swiper-slide img {
-    width: 140%; /* 768px 이하에서는 이미지 크기를 140%로 설정 */
+  .infinite-slider img, .infinite-slider2 img{
+    width: 350%;
+  }
+  .review-txt a img{
+    width: 40px;
+  }
+  .infinite-slider, .infinite-slider2 {
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0)); /* 양옆을 희미하게 하는 마스크 효과 */
   }
 }
 
 /* 매우 작은 화면 (예: 작은 모바일) */
+
 @media screen and (max-width: 480px) {
-  .farmswiperb .swiper-slide img,
-  .farmswiperc .swiper-slide img {
-    width: 160%; /* 480px 이하에서는 이미지 크기를 160%로 설정 */
+  .infinite-slider img, .infinite-slider2 img{
+    width: 450%;
+  }
+  .review-txt a img{
+    width: 38px;
+  }
+  .infinite-slider, .infinite-slider2 {
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0)); /* 양옆을 희미하게 하는 마스크 효과 */
   }
 }
-
+@media screen and (max-width: 320px) {
+  .infinite-slider img, .infinite-slider2 img{
+    width: 600%;
+  }
+  .review-txt a img{
+    width: 38px;
+  }
+  .infinite-slider, .infinite-slider2 {
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0)); /* 양옆을 희미하게 하는 마스크 효과 */
+  }
+}
 /* 텍스트 */
 @media screen and (max-width: 860px) {
  
@@ -89,18 +155,16 @@ p.review-txt {
 
 @media screen and (max-width: 320px) {
   p.review-txt {
-    font-size: 20px;
+    font-size: 16px;
+  }
+  .review-txt a img{
+    width: 30px;
   }
 }
 
 /* 반응형 텍스트 */
-#prorev,
-#cusrev {
+#prorev, #cusrev {
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.farmswiperb {
-  margin-top: 5%;
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
