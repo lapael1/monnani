@@ -1,29 +1,30 @@
 window.addEventListener("load", function () {
-  const swFarmswiperb = new Swiper(".sw-farmswiperb", {
-    speed: 70000,  // 천천히 슬라이드 이동
-    loop: true,   // 무한 반복 활성화
+  // farmswiperb: 우측으로 서서히 오토플레이
+  const farmswiperb = new Swiper(".sw-farmswiperb", {
+    slidesPerView: 1, // 한번에 보이는 슬라이드 개수
+    spaceBetween: 10, // 슬라이드 간 간격
+    loop: true, // 슬라이드 반복
     autoplay: {
-      delay: 0,  // 지연 시간 없이 연속적으로 슬라이드
-      disableOnInteraction: false,  // 사용자가 상호작용해도 autoplay 유지
-      reverseDirection: true,
+      
+      disableOnInteraction: false, // 사용자가 터치해도 자동 슬라이드 유지
     },
-    slidesPerView: 'auto',  // 슬라이드 크기를 이미지 크기에 맞춰 자동 조정
-    spaceBetween: 10,  // 슬라이드 간 간격
-    centeredSlides: true, // 슬라이드가 항상 중앙에 배치
-    freeMode: true,  // 슬라이드가 자유롭게 움직일 수 있게 설정
+    speed: 50000, // 1초 동안 서서히 슬라이드 전환
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
 
-  const swFarmswiperc = new Swiper(".sw-farmswiperc", {
-    speed: 70000,  // 천천히 슬라이드 이동
-    loop: true,   // 무한 반복 활성화
+  // farmswiperc: 좌측으로 서서히 오토플레이
+  const farmswiperc = new Swiper(".sw-farmswiperc", {
+    slidesPerView: 1, // 한번에 보이는 슬라이드 개수
+    spaceBetween: 10, // 슬라이드 간 간격
+    loop: true, // 슬라이드 반복
     autoplay: {
-      delay: 0,  // 지연 시간 없이 연속적으로 슬라이드
-      disableOnInteraction: false,  // 사용자가 상호작용해도 autoplay 유지
-     // 이 방향은 반대 방향으로 슬라이드
+ // 3초마다 자동 슬라이드
+      reverseDirection: true, // 슬라이드 방향을 좌측으로 설정
+      disableOnInteraction: false, // 사용자가 터치해도 자동 슬라이드 유지
     },
-    slidesPerView: 'auto',  // 슬라이드 크기를 이미지 크기에 맞춰 자동 조정
-    spaceBetween: 10,  // 슬라이드 간 간격
-    centeredSlides: true, // 슬라이드가 항상 중앙에 배치
-    freeMode: true,  // 슬라이드가 자유롭게 움직일 수 있게 설정
+    speed: 50000, // 1초 동안 서서히 슬라이드 전환
   });
 });
