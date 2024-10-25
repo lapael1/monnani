@@ -1,15 +1,15 @@
 @charset "utf-8";
-.recommend{
+.recommend {
   display: block;
   position: relative;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 150px;
 }
-.recommend-top{
+.recommend-top {
   display: block;
   position: relative;
 }
-.recommend-content{
+.recommend-content {
   gap: 20px;
 }
 /* 타이틀 */
@@ -18,20 +18,19 @@ h2.title {
   font-size: 36px;
   font-weight: bold;
   text-align: center;
-  display: inline-block;  /* 텍스트의 너비에 맞춤 */
+  display: inline-block; /* 텍스트의 너비에 맞춤 */
 }
-.title-wrap{
+.title-wrap {
   text-align: center;
-  margin-bottom: 50px;
-
+  margin: 70px 0;
 }
 .recommend h2::after {
   content: "";
   display: block;
-  width: 100%;              /* h2의 너비에 맞게 설정 */
+  width: 100%; /* h2의 너비에 맞게 설정 */
   height: 16px;
   border-radius: 5px;
-  background-color: #62C975;
+  background-color: #62c975;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -47,7 +46,7 @@ h2.title {
   max-width: 380px;
   width: 100%;
   border-radius: 10px;
-  
+
   margin-bottom: 20px; /* 아래 여백 추가 */
   display: flex;
   flex-direction: column;
@@ -60,63 +59,63 @@ h2.title {
   margin-top: 20px; /* 이미지 상단에 여백 추가 */
 }
 
-
-.rec-title{
+.rec-title {
   padding-top: 5%;
   font-weight: bold;
   font-size: 20px;
 }
-.rec-txt{
+.rec-txt {
   padding: 10px;
   line-height: 150%;
   font-size: 18px;
 }
-.recommendtab{
+.recommendtab {
   display: none;
 }
 
 /* 반응형 스타일 */
 /* 태블릿 및 작은 화면 대응 */
 @media (max-width: 1024px) {
- .recommend{
-  display: none;
- }
-  .recommendtab{
+  .recommend {
+    display: none;
+  }
+  .recommendtab {
     position: relative;
     display: block;
+    margin-top: 50px;
   }
-  .rectabwrap{
+  .rectabwrap {
     display: block;
     position: relative;
   }
-  .rectabcon{
+  .rectabcon {
     display: flex;
     align-items: center;
     gap: 20px;
     /* background-color: #F5F5F7; */
   }
-  .rectabtxt{
+  .rectabtxt {
     display: flex;
     flex-direction: column;
     gap: 8px;
   }
-  .rectabwrap{
+  .rectabwrap {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
   }
-  .rectabcon{
+  .rectabcon {
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
   }
   #rectabtitle::after {
     content: "";
     display: block;
-    width: 100%;              /* h2의 너비에 맞게 설정 */
+    width: 100%; /* h2의 너비에 맞게 설정 */
     height: 16px;
     border-radius: 5px;
-    background-color: #62C975;
+    background-color: #62c975;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -126,50 +125,49 @@ h2.title {
 
 /* 모바일 화면 대응 */
 @media (max-width: 768px) {
-  .recommend{
-    margin-top: 0px
+  .recommend {
+    margin-top: 50px;
   }
- 
+
   .recommend-content {
     flex-direction: column; /* 세로 정렬로 변경 */
     align-items: center; /* 중앙 정렬 */
   }
-  .rec-txt{
+  .rec-txt {
     padding-top: 10%;
   }
 }
 
-
 /* 작은 모바일 화면 대응 */
 @media (max-width: 600px) {
-  .rectabtxt h2{
+  .rectabtxt h2 {
     font-size: 20px;
   }
-  .rectabtxt p{
+  .rectabtxt p {
     font-size: 15px;
   }
 }
 @media (max-width: 480px) {
-  .rectabtxt h2{
+  .rectabtxt h2 {
     font-size: 18px;
   }
-  .rectabtxt p{
+  .rectabtxt p {
     font-size: 14px;
   }
 }
 @media (max-width: 400px) {
-  .rectabtxt h2{
+  .rectabtxt h2 {
     font-size: 16px;
   }
-  .rectabtxt p{
+  .rectabtxt p {
     font-size: 13px;
   }
 }
 @media (max-width: 320px) {
-  .rectabtxt h2{
+  .rectabtxt h2 {
     font-size: 15px;
   }
-  .rectabtxt p{
+  .rectabtxt p {
     font-size: 12px;
   }
 }

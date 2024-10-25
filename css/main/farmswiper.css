@@ -3,6 +3,7 @@
 .farmswiper {
   position: relative;
   display: block;
+  margin-bottom: 50px;
 }
 
 .farmswiper img {
