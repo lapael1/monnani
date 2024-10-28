@@ -63,12 +63,20 @@
 }
 .visual1 button {
   background-color: #ff6741;
+  cursor: pointer;
+}
+.visual1 button:hover{
+  background-color: #e2360a;
 }
 .visual2 {
   color: white;
 }
 .visual2 button {
-  background-color: #1FBF6A;
+  background-color: #62c975;
+ cursor: pointer;
+}
+.visual2 button:hover{
+  background-color: #43AE56;
 }
 .visual2 p {
   color: white;
