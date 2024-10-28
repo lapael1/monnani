@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>정기배송</title>
+    <link rel="stylesheet" href="css/main/main.css">
+    <link rel="stylesheet" href="css/delivery/delivery.css">
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script>
       // 우편번호 찾기 함수 (자동 실행되지 않음)
@@ -180,6 +182,48 @@
             <p class="payment-point">
               <!-- 보유 포인트 -->
             </p>
+            <h3>쿠폰</h3>
+            <select name="coupon" id="delivery-coupon">
+              <option value="none">---------------</option>
+            </select>
+          </div>
+          <div class="payment-wallet">
+            <h3>결제 수단</h3>
+            <ul>
+              <li>신용카드</li>
+              <li>Toss</li>
+              <li>네이버페이</li>
+              <li>카카오페이</li>
+              <li>PAYCO</li>
+              <li>계좌이체</li>
+            </ul>
+          </div>
+          <div class="payment-price">
+            <h3>결제 금액</h3>
+            <div class="payment-item">
+              <span>상품 가격</span>
+              <span>₩00,000</span>
+          </div>
+          
+          <div class="payment-item">
+              <span>배송비</span>
+              <span>₩0,000</span>
+          </div>
+          
+          <div class="payment-item">
+              <span>포인트 적용 금액</span>
+              <span>-₩0,000</span>
+          </div>
+          
+          <div class="payment-item">
+              <span>쿠폰 적용 금액</span>
+              <span>-₩0,000</span>
+          </div>
+          
+          <div class="payment-item total-amount">
+              <span>총 결제 금액</span>
+              <span>₩00,000</span>
+          </div>
           </div>
         </div>
       </div>

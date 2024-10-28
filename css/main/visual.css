@@ -70,9 +70,14 @@
 .visual2 p {
   color: white;
 }
+@media screen and (max-width:1180px){
+  .visual{
+    padding-top: 90px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .visual {
-    padding-top: 90px;
+    
     aspect-ratio: 1920/900;
   }
   .main-banner button {
