@@ -3,18 +3,18 @@
 p.review-txt {
   font-size: 26px;
 }
-.review-txt a img{
+.review-txt img{
   width: 50px;
 }
 .review-txt {
   overflow: hidden;
 }
-.review-txt a img {
+.review-txt img {
   transition: filter 0.5s ease; /* 전환 효과 */
   vertical-align: top;
 }
 /* 마우스를 올렸을 때 밝기 조절 */
-.review-txt a:hover img {
+.review-txt img:hover {
   filter: brightness(0.8); /* 밝기를 70%로 줄여 색을 더 짙게 표현 */
 }
 .review .title{
@@ -89,7 +89,7 @@ p.review-txt {
   .infinite-slider img, .infinite-slider2 img{
     width: 280%;
   }
-  .review-txt a img{
+  .review-txt img{
     width: 45px;
   }
 }
@@ -99,7 +99,7 @@ p.review-txt {
   .infinite-slider img, .infinite-slider2 img{
     width: 350%;
   }
-  .review-txt a img{
+  .review-txt img{
     width: 40px;
   }
   .infinite-slider, .infinite-slider2 {
@@ -113,7 +113,7 @@ p.review-txt {
   .infinite-slider img, .infinite-slider2 img{
     width: 450%;
   }
-  .review-txt a img{
+  .review-txt img{
     width: 38px;
   }
   .infinite-slider, .infinite-slider2 {
@@ -124,7 +124,7 @@ p.review-txt {
   .infinite-slider img, .infinite-slider2 img{
     width: 600%;
   }
-  .review-txt a img{
+  .review-txt img{
     width: 38px;
   }
   .infinite-slider, .infinite-slider2 {
@@ -157,7 +157,7 @@ p.review-txt {
   p.review-txt {
     font-size: 16px;
   }
-  .review-txt a img{
+  .review-txt img{
     width: 30px;
   }
 }
