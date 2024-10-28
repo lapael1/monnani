@@ -29,6 +29,9 @@
   right: 5.5%;
   bottom: 30.4%;
 }
+.main-banner button a{
+  color: #fff;
+}
 .main-banner > p {
   position: absolute;
   bottom: 20.2%;
