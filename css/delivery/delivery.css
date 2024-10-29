@@ -8,6 +8,7 @@ h2{
 ul{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 button{
   color: white;
@@ -22,15 +23,31 @@ padding-top: 100px;
 .delivery-review ul li{
   width: 31%;
   padding: 20px;
+  background-color: rgb(245, 245, 247);
 }
-.delivery-review img:first-child{
+.delivery-review p{
+  display: -webkit-box;          /* Flex 컨테이너로 설정 */
+  -webkit-box-orient: vertical;  /* 박스 방향을 세로로 설정 */
+  overflow: hidden;              /* 넘치는 텍스트 숨김 */
+  text-overflow: ellipsis;       /* 말줄임표 사용 */
+  -webkit-line-clamp: 4;         /* 최대 4줄까지만 표시 */
+  line-height: 1.6;
+}
+.review-photo{
   width: 100%;
   aspect-ratio: 1/1;
   /* padding: 10px; */
   
 }
+.review-star{
+  width: 50%;
+  margin: 10px 0;
+}
 .delivery-instruct > .inner > ul>li{
   width: 48%;
+}
+.delivery-instruct ul li ul{
+  width: 100%;
 }
 .delivery-instruct ul li ul li{
   text-align: center;
@@ -39,6 +56,15 @@ padding-top: 100px;
 width: 80%;
 /* display: inline-block; */
 }
-.delivery-instruct ul li ul:nth-child(2) li:first-child{
-  width: 33px;
+.delivery-instruct h3{
+  text-align: center;
+  margin: 25px 0 70px 0;
+  font-size: 25px;
+}
+.delivery-instruct ul li:nth-child(2) ul li:first-child{
+  width: 30%;
+  margin-right: 10px;
+}
+.delivery-instruct ul li:nth-child(2) ul li:last-child{
+  width: calc(70% - 10px);
 }
