@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
   const swModal = new Swiper(".sw-modal", {
     slidesPerView: 1, // 한 번에 하나의 슬라이드만 보여줌
     loop: true,
-  
+
     navigation: {
       nextEl: '.swiper-button-next', // 다음 슬라이드 버튼
       prevEl: '.swiper-button-prev', // 이전 슬라이드 버튼
@@ -28,7 +28,6 @@ $(document).ready(function () {
     var expires = "expires=" + date.toUTCString();
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
   }
-
   // 쿠키 확인 함수
   function getCookie(name) {
     var decodedCookie = decodeURIComponent(document.cookie);
