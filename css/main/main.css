@@ -86,6 +86,7 @@ h2.title {
 
 .modal-wrapper {
   width: 500px; /* 모달 팝업의 전체 크기 */
+  
   height: auto;
   position: relative;
 }
