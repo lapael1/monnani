@@ -5,7 +5,8 @@
   width: 100%;
   height: auto;
   background-color: #fff9ea;
-  margin: 10px auto;
+  margin: 20px auto;
+  /* margin-top: 10px; */
 }
 .gallery h2 {
   text-align: center;
@@ -20,11 +21,9 @@
 }
 .gallery-inner ul {
   display: flex;
-  /* justify-content: space-evenly; */
-  /* padding: 50px 30px; */
   flex-wrap: wrap;
-  /* text-align: center; */
   gap: 10px;
+  margin-top: 10px;
   min-width: 280px;
 }
 .gallery-inner ul li {
