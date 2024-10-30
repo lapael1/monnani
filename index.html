@@ -138,13 +138,15 @@
       <div class="faqwrap">
         <div class="faqtop">
           <svg
+          id="faqClose"
+          onclick="closeFaq()"
             width="20"
             height="20"
             viewBox="0 0 13 20"
-            fill="none"
+            fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
             foundation="[object Object]"
-            class="InnerIconstyled__Icon-ch-front__sc-197h5bb-0 dzkHAv"
+            class="icon"
             defaultopacity="1"
             hoveredopacity="1"
             margintop="0"
@@ -152,6 +154,7 @@
             marginbottom="0"
             marginleft="8"
             withtheme="true"
+            style="color: #ff6741;"
           >
             <path
               fill="currentColor"
@@ -189,7 +192,7 @@
         </div>
         <!-- faqcontent -->
         <div class="MessageNodestyled__Container-ch-front__sc-1xdrx16-0 duHTod">
-          <div class="TimeDividerstyled__TimeDivider-ch-front__sc-jlgrsq-0 euWjea">오전 11:32</div>
+          <div class="TimeDividerstyled__TimeDivider-ch-front__sc-jlgrsq-0 euWjea" id="current-time"></div>
           <div class="MessageNodestyled__MessageWrapper-ch-front__sc-1xdrx16-1">
             <div class="DeskMessagestyled__Wrapper-ch-front__sc-1oun56u-1 hlXDXU" tabindex="0">
               <span class="a11y-hidden"> A message sent by an agent </span>
@@ -261,11 +264,12 @@
     <!-- 문의복사 -->
     
     <script>
+      // 더보기, 접기 기능
       function toggleText() {
         const noticeText = document.getElementById("notice-text");
         const fullText = document.getElementById("full-text");
         const toggleButton = document.querySelector(".faqtime3");
-
+    
         if (fullText.style.display === "none") {
           noticeText.style.display = "none";
           fullText.style.display = "block";
@@ -276,6 +280,27 @@
           toggleButton.textContent = "더보기";
         }
       }
+    // 닫기 기능
+    function closeFaq() {
+    const faqSection = document.getElementById("faqSection");
+    faqSection.style.display = "none"; // faqSection을 숨기기
+  }
+      // 현재 시간 업데이트 기능
+      function updateTime() {
+        const now = new Date();
+        let hours = now.getHours();
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const period = hours >= 12 ? '오후' : '오전';
+    
+        hours = hours % 12 || 12; // 12시간 형식으로 변환, 0시는 12로 표시
+        const formattedTime = `${period} ${hours}:${minutes}`;
+    
+        document.getElementById("current-time").textContent = formattedTime;
+      }
+    
+      // 페이지 로드 시 즉시 시간 설정하고, 1초마다 갱신
+      updateTime();
+      setInterval(updateTime, 1000);
     </script>
 
     <!-- 전체 wrap -->
