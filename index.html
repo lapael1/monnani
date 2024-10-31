@@ -89,38 +89,55 @@
     <div id="myModal" class="modal">
       <div class="modal-wrapper">
         <div class="modal-content">
-          <!-- 스와이퍼가 적용될 이미지 영역 -->
-          <div class="swiper sw-modal">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="signup.html">
-                  <img src="images/eventmodal3.png" alt="이벤트 팝업 이미지" class="popup_1" />
-                </a>
+          <!-- 페이지 네이션 요소 -->
+          <div class="swiper-pagination"></div>
+    
+          <!-- Swiper 컨테이너 -->
+          <div class="swiper sw-modal"> <!-- Swiper 컨테이너 클래스 -->
+            <div class="swiper-wrapper"> <!-- 슬라이드 래퍼 -->
+              <!-- 각 슬라이드 -->
+              <div class="swiper-slide" id="modal-wrap1">
+                <div class="modal-wrap">
+                  <a href="signup.html">
+                    <img src="images/eventmodal3.png" alt="이벤트 팝업 이미지" class="popup_1" />
+                  </a>
+                  <div class="close-wrap">
+                    <label><input type="checkbox" id="notToday1" /><span class="notToday">오늘 하루 열지 않음</span></label>
+                    <span class="close-btn" onclick="closeSlide('modal-wrap1', 'notToday1')">&times;</span>
+                  </div>
+                </div>
               </div>
-              <div class="swiper-slide">
-                <a href="community.html">
-                  <img src="images/eventmodal2.png" alt="이벤트 팝업 이미지" class="popup_2" />
-                </a>
+              <div class="swiper-slide" id="modal-wrap2">
+                <div class="modal-wrap">
+                  <a href="community.html">
+                    <img src="images/eventmodal2.png" alt="이벤트 팝업 이미지" class="popup_2" />
+                  </a>
+                  <div class="close-wrap">
+                    <label><input type="checkbox" id="notToday2" /><span class="notToday">오늘 하루 열지 않음</span></label>
+                    <span class="close-btn" onclick="closeSlide('modal-wrap2', 'notToday2')">&times;</span>
+                  </div>
+                </div>
               </div>
-              <div class="swiper-slide">
-                <a href="purchase.html">
-                  <img src="images/eventmodal1.png" alt="이벤트 팝업 이미지" class="popup_3" />
-                </a>
+              <div class="swiper-slide" id="modal-wrap3">
+                <div class="modal-wrap">
+                  <a href="purchase.html">
+                    <img src="images/eventmodal1.png" alt="이벤트 팝업 이미지" class="popup_3" />
+                  </a>
+                  <div class="close-wrap">
+                    <label><input type="checkbox" id="notToday3" /><span class="notToday">오늘 하루 열지 않음</span></label>
+                    <span class="close-btn" onclick="closeSlide('modal-wrap3', 'notToday3')">&times;</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- 네비게이션 버튼 추가 -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-
-          <!-- 고정된 닫기 버튼 및 '오늘 하루 열지 않음' -->
-          <div class="close-wrap">
-            <label><input type="checkbox" id="notToday" /><span class="notToday">오늘 하루 열지 않음</span></label>
-            <span class="close-btn">&times;</span>
           </div>
         </div>
       </div>
     </div>
+    
+    
+    
+    
 
     <!-- 플로팅버튼 -->
 
@@ -138,8 +155,8 @@
       <div class="faqwrap">
         <div class="faqtop">
           <svg
-          id="faqClose"
-          onclick="closeFaq()"
+            id="faqClose"
+            onclick="closeFaq()"
             width="20"
             height="20"
             viewBox="0 0 13 20"
@@ -154,7 +171,7 @@
             marginbottom="0"
             marginleft="8"
             withtheme="true"
-            style="color: #ff6741;"
+            style="color: #ff6741"
           >
             <path
               fill="currentColor"
@@ -188,7 +205,6 @@
         <div tabindex="0" class="ChannelInfostyled__Wrapper-ch-front__sc-2hwj0l-0 bkkQiR">
           <div size="72" class="Avatarstyled__Wrapper-ch-front__sc-yfy5xq-0 eLJRgO"><img width="72" height="72" src="images/call_carrot.png" alt="" /></div>
           <div class="ChannelInfostyled__Title-ch-front__sc-2hwj0l-1 cBrgxr">몬나니농장에 문의하기</div>
-          
         </div>
         <!-- faqcontent -->
         <div class="MessageNodestyled__Container-ch-front__sc-1xdrx16-0 duHTod">
@@ -262,14 +278,14 @@
       </div>
     </div>
     <!-- 문의복사 -->
-    
+
     <script>
       // 더보기, 접기 기능
       function toggleText() {
         const noticeText = document.getElementById("notice-text");
         const fullText = document.getElementById("full-text");
         const toggleButton = document.querySelector(".faqtime3");
-    
+
         if (fullText.style.display === "none") {
           noticeText.style.display = "none";
           fullText.style.display = "block";
@@ -280,24 +296,24 @@
           toggleButton.textContent = "더보기";
         }
       }
-    // 닫기 기능
-    function closeFaq() {
-    const faqSection = document.getElementById("faqSection");
-    faqSection.style.display = "none"; // faqSection을 숨기기
-  }
+      // 닫기 기능
+      function closeFaq() {
+        const faqSection = document.getElementById("faqSection");
+        faqSection.style.display = "none"; // faqSection을 숨기기
+      }
       // 현재 시간 업데이트 기능
       function updateTime() {
         const now = new Date();
         let hours = now.getHours();
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const period = hours >= 12 ? '오후' : '오전';
-    
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const period = hours >= 12 ? "오후" : "오전";
+
         hours = hours % 12 || 12; // 12시간 형식으로 변환, 0시는 12로 표시
         const formattedTime = `${period} ${hours}:${minutes}`;
-    
+
         document.getElementById("current-time").textContent = formattedTime;
       }
-    
+
       // 페이지 로드 시 즉시 시간 설정하고, 1초마다 갱신
       updateTime();
       setInterval(updateTime, 1000);

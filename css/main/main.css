@@ -71,14 +71,18 @@ h2.title {
 }
 /* 모달창 */
 /* 모달 컨테이너 */
-.modal {
+/* 모달페이지네이션 */
+/* 페이지 네이션 위치 설정 */
+/* #myModal 내 페이지 네이션을 상단에 위치 */
+
+#myModal {
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   z-index: 9999;
   left: 0;
-  top: 00px;
+  top: 0px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -93,7 +97,6 @@ h2.title {
 
 .modal-content {
   width: 80%;
-  background-color: white;
   position: relative;
   border-radius: 20px;
   overflow: hidden;
@@ -106,11 +109,31 @@ h2.title {
 }
 
 .sw-modal .swiper-slide {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+}
+#myModal .swiper-pagination {
+  position: absolute;
+  bottom: auto;
+  width: 100%;
+  text-align: center;
+  z-index: 10; /* 이미지 위로 배치 */
 }
 
+/* 페이지네이션의 각 불릿 스타일 */
+#myModal .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0.8;
+  margin: 0 3px;
+}
+
+#myModal .swiper-pagination-bullet-active {
+  background-color: #ff6741; /* 활성화된 불릿 색상 */
+  opacity: 1;
+}
 .sw-modal img {
   width: 100%;
   display: block;
