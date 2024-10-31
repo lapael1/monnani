@@ -2,3 +2,28 @@
 .visual-community img{
   width: 100%;
 }
+.review-prod{
+  display: block;
+  position: relative;
+}
+.reviewprodwrap .reviewimages{
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.reviewprodwrap{
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+padding: 15px 20px;
+border-radius: 30px;
+}
+.prostar, .cusstar{
+  width: 100%;
+  max-width: 120px;
+}
