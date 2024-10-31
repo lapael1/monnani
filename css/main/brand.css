@@ -1,0 +1,60 @@
+@charset "utf-8";
+.h-368px{
+  height: 550px;
+  position: relative;
+}
+.overflow-hidden{
+  overflow: hidden;
+}
+.object-cover {
+  object-fit: cover;
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+video {
+  max-width: 100%;
+  height: auto;
+}
+.bg-littleblack {
+  background-color: #00000080;
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.font-bold {
+  font-weight: 700;
+}
+.text-center {
+  text-align: center;
+}
+.top-127px {
+  top: 150px;
+}
+.inset-0, .inset-x-0 {
+  right: 0;
+  left: 0;
+}
+.inset-0 {
+  top: 0;
+  bottom: 0;
+}
+.absolute {
+  position: absolute;
+}
+.font-body1 {
+  font-size: 16px;
+  line-height: 24px;
+}
+.w-full {
+  width: 100%;
+}
+.brandh1{
+  text-align: center;
+  vertical-align: middle;
+  
+}
