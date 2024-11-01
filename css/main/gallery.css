@@ -86,8 +86,6 @@
 }
 
 /* 갤러리 상세페이지 */
-
-/* 갤러리 상세페이지 상단 이미지영역 */
 .gallery-wrap {
   width: 100%;
   height: auto;
@@ -95,25 +93,27 @@
 .gallery-visual {
   position: relative;
   text-align: center;
-  /* height: auto; */
+  height: auto;
 }
 .gallery-visual img {
   width: 100%;
-  /* height: 10%; */
   opacity: 0.5;
+  height: 550px;
+  /* min-height: 300px; */
 }
-.gallery-visual h1 {
+/* .gallery-visual h1 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #000;
   font-size: 30px;
-}
+} */
 
-/* 갤러리 상세페이지 사진리스트 영역 */
+/* 갤러리 상세페이지 */
 .gallery-cate {
   width: 100%;
+  margin-top: 20px;
 }
 .gallery-wh {
   list-style: none;
@@ -146,9 +146,9 @@
 .gallery-item-img {
   width: 100%;
   height: 260px;
+
   overflow: hidden;
   object-fit: cover;
-  border-radius: 15px;
 }
 .gallery-description {
   margin-top: 10px;
@@ -162,7 +162,6 @@
   width: 100%;
   height: 100%;
   transition: all 0.3s linear;
-  border-radius: 15px;
 }
 .gallery-item-img > img:hover {
   transform: scale(1.1);
@@ -185,7 +184,7 @@
   padding: 40px 20px;
 }
 .bbsBody img {
-  width: 100%;
+  width: 80%;
 }
 .bbsSubject h3,
 .bbsSubject p {
@@ -391,6 +390,10 @@
   }
   .bbs-de {
     font-size: 14px;
+  }
+  .gallery-visual img {
+    height: 72vw;
+    min-height: 330px;
   }
 }
 
