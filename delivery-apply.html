@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>정기배송</title>
-    <link rel="stylesheet" href="css/main/reset.css">
-    <link rel="stylesheet" href="css/main/main.css">
-    <link rel="stylesheet" href="css/delivery/delivery-apply.css">
+    <link rel="stylesheet" href="css/main/reset.css" />
+    <link rel="stylesheet" href="css/main/main.css" />
+    <link rel="stylesheet" href="css/delivery/delivery-apply.css" />
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script>
       // 우편번호 찾기 함수 (자동 실행되지 않음)
@@ -36,10 +36,7 @@
               }
               // 건물명이 있고, 공동주택일 경우 추가한다.
               if (data.buildingName !== "" && data.apartment === "Y") {
-                extraAddr +=
-                  extraAddr !== ""
-                    ? ", " + data.buildingName
-                    : data.buildingName;
+                extraAddr += extraAddr !== "" ? ", " + data.buildingName : data.buildingName;
               }
               // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
               if (extraAddr !== "") {
@@ -121,37 +118,19 @@
           <div class="delivery-address">
             <h3>주소</h3>
             <input type="text" id="sample6_postcode" placeholder="우편번호" />
-            <input
-              type="button"
-              onclick="sample6_execDaumPostcode()"
-              value="우편번호 찾기"
-            /><br />
+            <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" /><br />
             <input type="text" id="sample6_address" placeholder="주소" /><br />
-            <input
-              type="text"
-              id="sample6_detailAddress"
-              placeholder="상세주소"
-            />
-            <input
-              type="text"
-              id="sample6_extraAddress"
-              placeholder="참고항목"
-            />
+            <input type="text" id="sample6_detailAddress" placeholder="상세주소" />
+            <input type="text" id="sample6_extraAddress" placeholder="참고항목" />
           </div>
           <div class="delivery-request">
             <h3>배송 요청사항</h3>
             <select name="request" id="request">
               <option value="leave-at-door">집 앞에 두고 가주세요</option>
-              <option value="leave-at-security">
-                경비실에 맡기고 가주세요
-              </option>
-              <option value="call-before-delivery">
-                배송 전에 연락 주세요
-              </option>
+              <option value="leave-at-security">경비실에 맡기고 가주세요</option>
+              <option value="call-before-delivery">배송 전에 연락 주세요</option>
               <option value="no-contact">비대면으로 배송해주세요</option>
-              <option value="specific-location">
-                특정 장소에 두고 가주세요 (기타)
-              </option>
+              <option value="specific-location">특정 장소에 두고 가주세요 (기타)</option>
             </select>
           </div>
           <div class="delivery-day">
@@ -177,8 +156,10 @@
           <div class="payment-discount">
             <h3>포인트</h3>
             <ul>
-              <li><input type="number"></li>
-              <li><button><p>사용</p></button></li>
+              <li><input type="number" /></li>
+              <li>
+                <button><p>사용</p></button>
+              </li>
             </ul>
             <p class="payment-point">
               <!-- 보유 포인트 -->
@@ -204,27 +185,27 @@
             <div class="payment-item">
               <span>상품 가격</span>
               <span>₩00,000</span>
-          </div>
-          
-          <div class="payment-item">
+            </div>
+
+            <div class="payment-item">
               <span>배송비</span>
               <span>₩0,000</span>
-          </div>
-          
-          <div class="payment-item">
+            </div>
+
+            <div class="payment-item">
               <span>포인트 적용 금액</span>
               <span>-₩0,000</span>
-          </div>
-          
-          <div class="payment-item">
+            </div>
+
+            <div class="payment-item">
               <span>쿠폰 적용 금액</span>
               <span>-₩0,000</span>
-          </div>
-          
-          <div class="payment-item total-amount">
+            </div>
+
+            <div class="payment-item total-amount">
               <span>총 결제 금액</span>
               <span>₩00,000</span>
-          </div>
+            </div>
           </div>
         </div>
       </div>
