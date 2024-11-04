@@ -7,14 +7,34 @@
   width: 100%;
   
 }
-.faqnotice{
+.faqnotice {
   margin: auto;
   background-color: #62C975;
-  width: 500px;
   color: white;
-  padding: 30px 20px 30px 2%;
-  border-radius: 50px;
+  padding: 30px 20px;
+  width: 500px;
+  border-radius: 8px; /* 모서리 둥글게 */
+  text-align: center; /* 중앙 정렬 */
 }
+
+/* 태블릿 (768px 이하) */
+@media (max-width: 768px) {
+  .faqnotice {
+    width: 80%; /* 가로폭을 화면의 80%로 설정 */
+    padding: 25px 15px; /* 패딩 조정 */
+  }
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .faqnotice {
+    width: 90%; /* 가로폭을 화면의 90%로 설정 */
+    padding: 20px 10px; /* 패딩 줄임 */
+    font-size: 14px; /* 텍스트 크기 조정 */
+  }
+}
+
+
 /* 화면 가운데 정렬을 위한 CSS */
 .faqmain {
   display: flex;
@@ -93,6 +113,69 @@
   box-sizing: border-box !important;
 }
 /* 문의내용 */
+/* 드롭다운 컨테이너 */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* select 요소 스타일 */
+.wixui-dropdown__input {
+  appearance: none; /* 기본 화살표 제거 */
+  width: 100%;
+  padding: 10px;
+  padding-right: 30px; /* 화살표 공간 확보 */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* 커스텀 화살표 아이콘 */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #666;
+  pointer-events: none; /* 화살표 클릭 방지 */
+}
+
+/* 반응형 스타일 */
+
+/* 태블릿 (768px 이하) */
+@media (max-width: 768px) {
+  .wixui-dropdown__input {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .custom-arrow {
+    right: 8px;
+    border-top: 5px solid #666;
+  }
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .wixui-dropdown__input {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .custom-arrow {
+    right: 6px;
+    border-top: 4px solid #666;
+  }
+}
+
+
 .snt4Te .rEindN {
   appearance: none;
   background-color: var(--corvid-background-color, rgba(var(--bg,255,255,255), 1));
@@ -127,7 +210,7 @@
   --label-text-align: center;
 }
 #comp-lnfzjprb {
-  width: 74px;
+  width: 95px;
   height: 25px;
   margin-bottom: 50px;
   
@@ -175,9 +258,7 @@
   
 }
 .wixui-button:hover {
-  background-color: #fff;
-  color: black;
-  border: 1px solid black;
+  background-color: #509e5e;
 }
 /* 텍스트 */
 .wixui-rich-text__text{
