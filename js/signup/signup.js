@@ -26,7 +26,7 @@ window.addEventListener("load", function () {
     }
     if (!pwRegex.test(pw)) {
       alert(
-        "비밀번호는 영대소문자, 숫자를 포함하여 최소 6자 이상 작성 해야 합니다."
+        "비밀번호는 영어, 숫자를 포함하여 최소 6자 이상 작성 해야 합니다."
       );
       return;
     }
@@ -42,7 +42,7 @@ window.addEventListener("load", function () {
     const users = JSON.parse(localStorage.getItem("users")) || [];
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
-    alert("가입이 완료 되었습니다. 로그인 페이지로 이동합니다.");
+    alert("가을맞이 회원가입시 적립급 2000원 지급 이벤트 중!");
     window.location.href = "login.html";
   });
   const agreeAllCheckbox = document.getElementById("agree-all");
