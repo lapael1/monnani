@@ -2,6 +2,25 @@
 .h-368px{
   height: 550px;
   position: relative;
+  padding-top: 100px;
+}
+.h-368px .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 어두운 반투명 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h-368px .overlay h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
 }
 .overflow-hidden{
   overflow: hidden;
@@ -58,4 +77,14 @@ video {
   text-align: center;
   vertical-align: middle;
   
+}
+@media screen and (max-width: 1180px){
+  .h-368px{
+    padding-top: 90px;
+  }
+}
+@media screen and (max-width: 768px){
+  .h-368px{
+    padding-top: 70px;
+  }
 }
