@@ -63,7 +63,7 @@
   margin: 0 15px;
 }
 .header ul li a {
-  font-weight: 700;
+  font-weight: 500;
 }
 .header ul li a:first-child:hover,
 .header ul li a:nth-child(2):hover {
