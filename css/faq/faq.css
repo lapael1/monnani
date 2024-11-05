@@ -2,12 +2,13 @@
 .faq {
   display: block;
   position: relative;
+  margin-bottom: 70px;
 }
 .faq-visual img {
   width: 100%;
 }
 .faqnotice {
-  margin: auto;
+  margin: 20px auto;
   background-color: #62c975;
   color: white;
   padding: 30px 20px;
