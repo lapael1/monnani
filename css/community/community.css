@@ -89,6 +89,7 @@
   transform-origin: center; /* 중심에서 커지도록 설정 */
 }
 
+
 /* 리뷰킹 */
 .revkingcard{
   display: flex;
@@ -146,7 +147,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6); /* 어두운 배경 */
   color: white;
-  font-size: 1.2em;
+  font-size: 16px;
   opacity: 0; /* 기본적으로 숨김 */
   transition: opacity 0.3s ease;
   padding: 10px;
@@ -307,8 +308,8 @@
   top: 10px;
   right: 10px;
   padding: 5px 10px;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
   color: white;
   border-radius: 5px;
   z-index: 1;
