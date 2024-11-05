@@ -1,4 +1,8 @@
 @charset "utf-8";
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+
 .header {
   width: 100%;
 
@@ -63,6 +67,7 @@
   margin: 0 15px;
 }
 .header ul li a {
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
   font-weight: 500;
 }
 .header ul li a:first-child:hover,
@@ -80,7 +85,9 @@
 }
 .login-display ul {
   display: flex;
-  font-weight: 700;
+  font-weight: 500;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+
 }
 .login-display ul li:hover {
   color: #ff6741;
@@ -90,7 +97,7 @@
   height: 100%;
   width: 30px;
   position: absolute;
-  right: 250px;
+  right: 0;
   text-align: center;
   align-content: center;
 }
